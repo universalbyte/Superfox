@@ -1,4 +1,4 @@
-// Version: 1.Y2021M03D27
+// Version: 1.Y2021M04D04
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -9,7 +9,7 @@
 // WindowsOS: https://portableapps.com
 // GNU/LinuxOS: https://www.mozilla.org
 
-// Create a "profile" folder in your "FirefoxPortable" Directory and copy this "prefs.js" file in your "/FirefoxPortable/profile/" folder and search in the file for // , edit these entries and activate them by removing these 2 / at the beginning of the entry/pref.
+// Create a "profile" folder in your "FirefoxPortable" Directory and copy this "prefs.js" file in your "/FirefoxPortable/profile/" folder and search in the file for // , edit these entries and activate them by removing the 2 / in front of user_pref.
 
 //*****************************************************************************************************************************************************
 // START:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/LinuxOS, right-click on it - Preferences - access rights - execute - check.
@@ -24,15 +24,15 @@
 
 // START: Features DISABLED----------
 // Firefox Account
+// Sync
 // Updates
-// Connections to MOZILLA and GOOGLE Servers
+// Connections to MOZILLA , GOOGLE , and other Servers
 // Safe Browsing
 // Geo Location
 // Autoplay Audio/Video
 // WebRTC
 // WebGL
 // Telemetry
-// Sync
 // END: Features DISABLED----------
 //
 // START: Features ENABLED---------- 
@@ -52,6 +52,7 @@ user_pref("app.normandy.shieldLearnMoreUrl", "");
 user_pref("app.privacyURL", "");
 user_pref("app.productInfo.baseURL", "");
 user_pref("app.releaseNotesURL", "");
+user_pref("app.releaseNotesURL.aboutDialog", "");
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.support.baseURL", "");
 user_pref("app.support.e10sAccessibilityUrl", "");
@@ -75,10 +76,11 @@ user_pref("app.update.url", "");
 user_pref("app.update.url.details", "");
 user_pref("app.update.url.manual", "");
 user_pref("app.vendorURL", "");
+user_pref("apz.record_checkerboarding", false);
 user_pref("apz.relative-update.enabled", false);
 user_pref("beacon.enabled", false);
 user_pref("breakpad.reportURL", "");
-//user_pref("browser.aboutConfig.showWarning", false); // This preference doesn't show a warning on "about:config" .
+//user_pref("browser.aboutConfig.showWarning", false); // Remove the 2 / in front of "user_pref" if you don't want a warning on about:config .
 user_pref("browser.aboutHomeSnippets.updateUrl", "");
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.bookmarks.max_backups", 0);
@@ -121,6 +123,13 @@ user_pref("browser.contentblocking.report.monitor.url", "");
 user_pref("browser.contentblocking.report.proxy_extension.url", "");
 user_pref("browser.contentblocking.report.social.url", "");
 user_pref("browser.contentblocking.report.tracker.url", "");
+user_pref("browser.contentblocking.report.vpn-android.url", "");
+user_pref("browser.contentblocking.report.vpn-ios.url", "");
+user_pref("browser.contentblocking.report.vpn-promo.url", "");
+user_pref("browser.contentblocking.report.vpn.enabled", false);
+user_pref("browser.contentblocking.report.vpn.url", "");
+user_pref("browser.contentblocking.report.vpn_platforms", "");
+user_pref("browser.contentblocking.report.vpn_regions", "");
 user_pref("browser.contentblocking.reportBreakage.url", "");
 user_pref("browser.contentHandlers.types.0.uri", "");
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false);
@@ -167,28 +176,28 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.recs.personalized"
 user_pref("browser.newtabpage.activity-stream.discoverystream.region-basic-layout", false);
 user_pref("browser.newtabpage.activity-stream.discoverystream.region-layout-config", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.region-spocs-config", "");
+user_pref("browser.newtabpage.activity-stream.discoverystream.region-stories-block", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.region-stories-config", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spoc.impressions", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs-endpoint", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized", false);
-user_pref("browser.newtabpage.activity-stream.feeds.aboutpreferences", false); // Removes "Firefox Home Content" from "Preferences > Home"
-user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false);
-user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false);
-user_pref("browser.newtabpage.activity-stream.feeds.favicon", false);
-user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false);
-user_pref("browser.newtabpage.activity-stream.feeds.places", false);
-user_pref("browser.newtabpage.activity-stream.feeds.prefs", false);
-user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+//user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.favicon", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.places", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // Preferences - Home - Firefox Home Content - Highlights MASTER
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Preferences - Home - Firefox Home Content - Topstories MASTER
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
-user_pref("browser.newtabpage.activity-stream.feeds.sections", false);
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
-user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false);
-user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false);
-user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false);
-user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+//user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // Preferences - Home - Firefox Home Content - Snippets MASTER
+//user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+//user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false); // Disables the GUI in Preferences - Home - Firefox Home Content
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // Preferences - Home - Firefox Home Content - Top Sites MASTER
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
 user_pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
@@ -197,16 +206,16 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcu
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
 user_pref("browser.newtabpage.activity-stream.pocketCta", "");
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false); // Preferences - Home - Firefox Home Content - Highlights SLAVE
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false); // Preferences - Home - Firefox Home Content - Highlights SLAVE
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Preferences - Home - Firefox Home Content - Highlights SLAVE
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false); // Preferences - Home - Firefox Home Content - Highlights SLAVE
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 0);
 user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0);
 user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
-user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false); // Preferences - Home - Firefox Home Content - Web Search MASTER
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // Preferences - Home - Firefox Home Content - Top Sites SLAVE
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion", false);
@@ -219,12 +228,14 @@ user_pref("browser.newtabpage.directory.source", "");
 user_pref("browser.newtabpage.enabled", false);
 user_pref("browser.newtabpage.pinned", "");
 user_pref("browser.onboarding.enabled", false);
+user_pref("browser.partnerlink.attributionURL", "");
 user_pref("browser.ping-centre.log", false);
 user_pref("browser.ping-centre.production.endpoint", "");
 user_pref("browser.ping-centre.staging.endpoint", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
 user_pref("browser.privatebrowsing.autostart", true); // You can remove this entry when you are using "browser.cache.disk.enable" and "browser.cache.disk.parent_directory" with a RAM-Disk ! This preference (Private Browsing Mode) will delete ALL USER DATA like "Passwords, Cookies, History, Sessions" before Firefox shuts down !
+user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 user_pref("browser.safebrowsing.allowOverride", false);
@@ -301,7 +312,7 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.startup.page", 0);
 user_pref("browser.tabs.allowTabDetach", false); // Remove this preference if you want to drag'n'drop your tabs into a NEW browser window.
 user_pref("browser.tabs.crashReporting.sendReport", false);
-//user_pref("browser.toolbars.bookmarks.visibility", "always" OR "never");
+//user_pref("browser.toolbars.bookmarks.visibility", "always" OR "never"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
 user_pref("browser.translation.engine", "");
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.themeOrigin", "");
@@ -318,8 +329,10 @@ user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.oneOffSearches", false);
 user_pref("browser.urlbar.openViewOnFocus", false);
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
+user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.history.onlyTyped", false);
 user_pref("browser.urlbar.suggest.openpage", false);
@@ -368,7 +381,7 @@ user_pref("dom.security.https_only_mode_pbm", true);
 //user_pref("dom.storage.enabled", false); // Add-ons may not work as expected. You may not be able to login on SecureMail/VPN's. Some Internet Sites may only work partially ! Leave the line disabled if you want to check e-mails from "SecureMail Providers" !
 //user_pref("dom.storage_access.enabled", false); // Some Internet Sites may only work partially !
 user_pref("dom.vibrator.enabled", false);
-user_pref("dom.webnotifications.enabled", false); // Notifications in the URL Bar are disabled !
+//user_pref("dom.webnotifications.enabled", false); // Remove the 2 / in front of "user_pref" if you don't want Website Notifications in the URL Bar !
 user_pref("domsecurity.httpsonly.infoURL", "");
 user_pref("experiments.manifest.uri", "");
 user_pref("extensions.abuseReport.amoDetailsURL", "");
@@ -432,7 +445,7 @@ user_pref("geo.wifi.uri", "");
 user_pref("home.sync.updateMode", 0);
 user_pref("identity.fxaccounts.auth.uri", "");
 user_pref("identity.fxaccounts.commands.enabled", false);
-user_pref("identity.fxaccounts.enabled", false);
+user_pref("identity.fxaccounts.enabled", false); // If you want to use a "Firefox Account", you need to delete all "identity.*" and "services.sync.*" preferences !
 user_pref("identity.fxaccounts.pairing.enabled", false);
 user_pref("identity.fxaccounts.remote.oauth.uri", "");
 user_pref("identity.fxaccounts.remote.pairing.uri", "");
@@ -509,9 +522,9 @@ user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", true);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
-user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entries are being displayed in "about:networking" -DNS
-user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in "about:networking" -DNS
-user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in "about:networking" -DNS
+user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entries are being displayed in about:networking -DNS
+user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
+user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.file.disable_unc_paths", true);
 user_pref("network.http.referer.spoofSource", true); // Captchas may not work !
 user_pref("network.http.sendRefererHeader", 0);
@@ -530,9 +543,9 @@ user_pref("network.proxy.type", 0);
 user_pref("network.security.esni.enabled", true);
 user_pref("network.trr.confirmationNS", "");
 user_pref("network.trr.mode", 2); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Option "3" is/was a BUG and doesn't let Firefox connect to the Internet ! This Preference WILL ignore your "hosts" file ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft CH\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"Cloudflare DNSoverTor (Experimental)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"}]");
+user_pref("network.trr.resolvers", "[{ "name": "Cloudflare", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Quad9", "url": "https://dns.quad9.net/dns-query" },{ "name": "Digitale Gesellschaft (Switzerland)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" },{ "name": "Cloudflare DNSoverTor (Experimental)", "url": "https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/"}]");
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
-//user_pref("network.warnOnAboutNetworking", false); // This preference doesn't show a warning on "about:networking" .
+//user_pref("network.warnOnAboutNetworking", false); // Remove the 2 / in front of "user_pref" if you don't want a warning on about:networking .
 user_pref("nglayout.initialpaint.delay", 0);
 user_pref("pfs.datasource.url", "");
 user_pref("pfs.filehint.url", "");
@@ -590,7 +603,7 @@ user_pref("services.blocklist.plugins.signer", "");
 user_pref("services.blocklist.update_enabled", false);
 user_pref("services.settings.security.onecrl.signer", "");
 user_pref("services.settings.server", "");
-user_pref("services.sync.enabled", false);
+user_pref("services.sync.enabled", false); // If you want to use a "Firefox Account", you need to delete all "identity.*" and "services.sync.*" preferences !
 user_pref("services.sync.fxa.privacyURL", "");
 user_pref("services.sync.fxa.termsURL", "");
 user_pref("services.sync.jpake.serverURL", "");
@@ -644,7 +657,7 @@ user_pref("urlclassifier.phishTable", "");
 user_pref("urlclassifier.trackingTable", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("webextensions.storage.sync.serverURL", "");
-user_pref("webgl.disabled", true);
+user_pref("webgl.disabled", true); // 3D Rendering !
 user_pref("xpinstall.signatures.devInfoURL", "");
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
