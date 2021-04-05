@@ -1,4 +1,6 @@
-// Version: 1.Y2021M04D04
+// Version: 1.Y2021M04D05
+
+// IMPORTANT INFO: Firefox87 (and maybe higher) generates an invalidprefs.js file in /FirefoxPortable/profile/. You have to manually copy/paste "network.trr.resolvers" in about:config !
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -187,7 +189,7 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized
 //user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false); // Disables the GUI in Preferences - Home - Firefox Home Content
 //user_pref("browser.newtabpage.activity-stream.feeds.places", false); // Disables the GUI in Preferences - Home - Firefox Home Content
 //user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false);
+//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in Preferences - Home - Firefox Home Content
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // Preferences - Home - Firefox Home Content - Highlights MASTER
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Preferences - Home - Firefox Home Content - Topstories MASTER
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
@@ -541,9 +543,10 @@ user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks_version", 5);
 user_pref("network.proxy.type", 0);
 user_pref("network.security.esni.enabled", true);
+//user_pref("network.trr.bootstrapAddress", "1.1.1.1"); // Use "1.1.1.1" ONLY, when "network.trr.resolvers"=https://cloudflare-dns.com/dns-query !
 user_pref("network.trr.confirmationNS", "");
 user_pref("network.trr.mode", 2); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Option "3" is/was a BUG and doesn't let Firefox connect to the Internet ! This Preference WILL ignore your "hosts" file ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ "name": "Cloudflare", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Quad9", "url": "https://dns.quad9.net/dns-query" },{ "name": "Digitale Gesellschaft (Switzerland)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" },{ "name": "Cloudflare DNSoverTor (Experimental)", "url": "https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/"}]");
+user_pref("network.trr.resolvers", "[{ "name": "Cloudflare (Official, Same country)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Quad9 (Official, Same country)", "url": "https://dns.quad9.net/dns-query" },{ "name": "Quad9 (Switzerland)", "url": "https://dns.nextdns.io/" },{ "name": "Digitale Gesellschaft (Switzerland)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" },{ "name": "Cloudflare DNSoverTor (Experimental, maybe only used for TorBrowser)", "url": "https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/"}]");
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // Remove the 2 / in front of "user_pref" if you don't want a warning on about:networking .
 user_pref("nglayout.initialpaint.delay", 0);
