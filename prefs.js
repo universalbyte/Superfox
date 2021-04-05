@@ -1,12 +1,12 @@
 // Version: 1.Y2021M04D05
 
-// IMPORTANT INFO: Firefox87 (and maybe higher) generates an invalidprefs.js file in /FirefoxPortable/profile/. You have to manually copy/paste "network.trr.resolvers" in about:config !
-
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
 // Copy this file in your BACKUP LOCATION and ONLY edit it when it is placed in /FirefoxPortable/profile/ !
 
-// Please read ALL "//" lines to get the best Information ! Download a portable version of Firefox from the sources below, so that your default Firefox doesn't brake !
+// Please read ALL "//" lines to get the best Information !
+
+// Download a portable version of Firefox from the sources below, so that your default Firefox doesn't brake !
 
 // WindowsOS: https://portableapps.com
 // GNU/LinuxOS: https://www.mozilla.org
@@ -39,7 +39,7 @@
 //
 // START: Features ENABLED---------- 
 // Private Browsing Mode
-// DOH (DNS-over-HTTPS)
+// DOH (DNS over HTTPS)
 // DNT (Do not track)
 // END: Features ENABLED----------
 //
@@ -153,6 +153,7 @@ user_pref("browser.laterrun.enabled", false);
 user_pref("browser.library.activity-stream.enabled", false);
 user_pref("browser.link.open_newwindow", 3);
 user_pref("browser.newtab.preload", false);
+user_pref("browser.newtab.search.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr-fxa", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.message-groups", "");
@@ -240,6 +241,10 @@ user_pref("browser.privatebrowsing.autostart", true); // You can remove this ent
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
+user_pref("browser.restart.purgecache", false);
+user_pref("browser.restart_menu.purgecache", false); // Preferences - General - Restart Menu Item
+user_pref("browser.restart_menu.requireconfirm", false); // Preferences - General - Restart Menu Item
+user_pref("browser.restart_menu.showpanelmenubtn", false); // Preferences - General - Restart Menu Item
 user_pref("browser.safebrowsing.allowOverride", false);
 user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 user_pref("browser.safebrowsing.debug", false);
@@ -313,7 +318,11 @@ user_pref("browser.shell.checkDefaultBrowser", false);
 //user_pref("browser.startup.homepage", "https://duckduckgo.com https://startpage.com https://searx.info https://www.qwant.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results
 user_pref("browser.startup.page", 0);
 user_pref("browser.tabs.allowTabDetach", false); // Remove this preference if you want to drag'n'drop your tabs into a NEW browser window.
+user_pref("browser.tabs.copyallurls", false);
+user_pref("browser.tabs.copyurl", false);
+user_pref("browser.tabs.copyurl.activetab", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.tabs.duplicateTab", false);
 //user_pref("browser.toolbars.bookmarks.visibility", "always" OR "never"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
 user_pref("browser.translation.engine", "");
 user_pref("browser.uitour.enabled", false);
@@ -465,6 +474,7 @@ user_pref("intl.accept_languages", "en-us,en");
 user_pref("intl.locale.matchOS", false);
 user_pref("intl.locale.os", "en-US");
 user_pref("intl.locale.requested", "en-US");
+//user_pref("javascript.enabled", false); // Some Internet Sites may only work partially !
 user_pref("keyword.enabled", false);
 user_pref("layers.acceleration.disabled", true);
 user_pref("layers.acceleration.force-enabled", false);
@@ -498,7 +508,9 @@ user_pref("media.navigator.video.enabled", false);
 user_pref("media.peerconnection.default_iceservers", "");
 user_pref("media.peerconnection.dtmf.enabled", false);
 user_pref("media.peerconnection.enabled", false); // Remove this preference if you want to use Web-Whatsapp, Web-Skype, Google-Hangouts and so on. Maybe you also have to remove other "media.peerconnection.*" entries to make it 100% work but this WILL leak your internal IP-Address !
+user_pref("media.peerconnection.ice.default_address_only", false);
 user_pref("media.peerconnection.ice.no_host", true);
+user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
 user_pref("media.peerconnection.ice.tcp", false);
 user_pref("media.peerconnection.identity.enabled", false);
 user_pref("media.peerconnection.identity.timeout", 1);
@@ -546,7 +558,7 @@ user_pref("network.security.esni.enabled", true);
 //user_pref("network.trr.bootstrapAddress", "1.1.1.1"); // Use "1.1.1.1" ONLY, when "network.trr.resolvers"=https://cloudflare-dns.com/dns-query !
 user_pref("network.trr.confirmationNS", "");
 user_pref("network.trr.mode", 2); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Option "3" is/was a BUG and doesn't let Firefox connect to the Internet ! This Preference WILL ignore your "hosts" file ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ "name": "Cloudflare (Official, Same country)", "url": "https://cloudflare-dns.com/dns-query" },{ "name": "Quad9 (Official, Same country)", "url": "https://dns.quad9.net/dns-query" },{ "name": "Quad9 (Switzerland)", "url": "https://dns.nextdns.io/" },{ "name": "Digitale Gesellschaft (Switzerland)", "url": "https://dns.digitale-gesellschaft.ch/dns-query" },{ "name": "Cloudflare DNSoverTor (Experimental, maybe only used for TorBrowser)", "url": "https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/"}]");
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (Official, Same country)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (Official, Same country)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (Switzerland)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"Digitale Gesellschaft (Switzerland)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"Cloudflare DNSoverTor (Experimental, maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"}]");
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // Remove the 2 / in front of "user_pref" if you don't want a warning on about:networking .
 user_pref("nglayout.initialpaint.delay", 0);
