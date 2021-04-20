@@ -1,4 +1,4 @@
-// Version: 1.Y2021M04D11
+// Version: 1.Y2021M04D20
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -36,30 +36,30 @@
 // WebGL
 // Telemetry
 // END: Features DISABLED----------
-//
+
 // START: Features ENABLED---------- 
 // Private Browsing Mode
 // DOH (DNS over HTTPS)
 // DNT (Do not track)
 // END: Features ENABLED----------
-//
+
 // If you want more privacy...
-//
+
 // delete the following files:
-//
+
 // /FirefoxPortable/crashreporter
 // /FirefoxPortable/crashreporter.ini
 // /FirefoxPortable/updater
 // /FirefoxPortable/updater.ini
 // /FirefoxPortable/update-settings.ini
 // /FirefoxPortable/browser/crashreporter-override.ini
-// /FirefoxPortable/browser/features/ Choose wisely !
-//
+// /FirefoxPortable/browser/features/*.xpi Choose wisely !
+
 // remove the URL's from:
-//
+
 // /FirefoxPortable/application.ini
 // /FirefoxPortable/platform.ini
-//
+
 // START: prefs.js file !
 user_pref("accessibility.support.url", "");
 user_pref("accessibility.typeaheadfind", false);
@@ -108,7 +108,7 @@ user_pref("browser.bookmarksBar.position", "top");
 user_pref("browser.cache.check_doc_frequency", 1);
 user_pref("browser.cache.disk.capacity", 1024000); // 1024000=1Gigabyte
 //user_pref("browser.cache.disk.enable", true); // Remove the 2 / in front of "user_pref" ONLY when you are using a "RAM-Disk" with "browser.cache.disk.parent_directory" and remove the line "user_pref("browser.privatebrowsing.autostart", true);" !
-//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/LinuxOS: /path/to/RAM-Disk/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! WindowsOS Software INFO: https://en.wikipedia.org/wiki/RAM_drive GNU/LinuxOS INFO: make /tmp/ into a TMPFS ! /etc/fstab: tmpfs /tmp/ tmpfs rw,nodev,nosuid,nodiratime,noatime,size=(Fill in at least 512 to 1024 Megabytes, or more if you have more RAM, and remove the Brackets)M 0 0
+//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/LinuxOS: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! WindowsOS Software INFO: https://en.wikipedia.org/wiki/RAM_drive
 user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
@@ -164,6 +164,7 @@ user_pref("browser.discovery.enabled", false);
 user_pref("browser.discovery.sites", "");
 //user_pref("browser.display.background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some Internet Sites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
 user_pref("browser.display.use_document_fonts", 0);
+user_pref("browser.download.autohideButton", true);
 user_pref("browser.download.forbid_open_with", true);
 user_pref("browser.formfill.enable", false);
 user_pref("browser.geolocation.warning.infoURL", "");
