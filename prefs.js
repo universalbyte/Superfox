@@ -1,25 +1,25 @@
-// Version: 1.Y2021M04D20
+// Version: 1.Y2021M04D25
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
 // Copy this file in your BACKUP LOCATION and ONLY edit it when it is placed in /FirefoxPortable/profile/ !
-
-// You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
 
 // Download a portable version of Firefox from the sources below, so that your default Firefox doesn't brake !
 
 // WindowsOS: https://portableapps.com
 // GNU/LinuxOS: https://www.mozilla.org
 
-// GNU/LinuxOS Users: Create a "profile" folder in your "FirefoxPortable" Directory and copy this "prefs.js" file in your "/FirefoxPortable/profile/" folder. The PortableApps-Firefox should already have a PROFILE folder.
+// You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
+
+// GNU/LinuxOS Users: Create a "profile" folder in /path/to/FirefoxPortable/ and copy this "prefs.js" file in this folder. The PortableApps-Firefox should already have a PROFILE folder.
 
 //*****************************************************************************************************************************************************
 // START:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/LinuxOS, right-click on it - Preferences - access rights - execute - check.
 // [Desktop Entry]
 // Terminal=false
-// Icon=/Path/to/FirefoxPortable/browser/chrome/icons/default/default128.png < IMPORTANT ! Edit this path !
+// Icon=/path/to/FirefoxPortable/browser/chrome/icons/default/default128.png < IMPORTANT ! Edit this path !
 // Name=FirefoxPortable
-// Exec=/Path/to/FirefoxPortable/firefox -profile /Path/to/FirefoxPortable/profile/ < IMPORTANT ! Edit these paths !
+// Exec=/path/to/FirefoxPortable/firefox -profile /path/to/FirefoxPortable/profile/ < IMPORTANT ! Edit these paths !
 // Type=Application
 // END:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work !
 //*****************************************************************************************************************************************************
@@ -27,7 +27,7 @@
 // START: Features DISABLED----------
 // Firefox Account
 // Sync
-// Updates
+// Firefox Updates: You cannot use it this way, hence you always need to download newer versions of Firefox from the sources in the INFO !
 // Connections to MOZILLA , GOOGLE , and other Servers
 // Safe Browsing
 // Geo Location
@@ -83,7 +83,7 @@ user_pref("app.update.checkInstallTime", false);
 user_pref("app.update.doorhanger", false);
 user_pref("app.update.download.promptMaxAttempts", 0);
 user_pref("app.update.elevation.promptMaxAttempts", 0);
-user_pref("app.update.enabled", false); // If you want to use Firefox Update, remove ALL "app.update.*" preferences to make it work !
+user_pref("app.update.enabled", false);
 user_pref("app.update.langpack.enabled", false);
 user_pref("app.update.log", false);
 user_pref("app.update.log.file", false);
@@ -296,7 +296,7 @@ user_pref("browser.safebrowsing.provider.google4.updateURL", "");
 user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
 user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
 user_pref("browser.safebrowsing.reportPhishURL", "");
-user_pref("browser.search.countryCode", "US");
+user_pref("browser.search.countryCode", "US"); // Fill in your 2-letter country code from: https://en.wikipedia.org/wiki/Country_code
 user_pref("browser.search.geoSpecificDefaults", false);
 user_pref("browser.search.geoSpecificDefaults.url", "");
 user_pref("browser.search.geoip.url", "");
@@ -307,7 +307,7 @@ user_pref("browser.search.order.3", "");
 user_pref("browser.search.order.US.1", "");
 user_pref("browser.search.order.US.2", "");
 user_pref("browser.search.order.US.3", "");
-user_pref("browser.search.region", "US");
+user_pref("browser.search.region", "US"); // Fill in your 2-letter country code from: https://en.wikipedia.org/wiki/Country_code
 user_pref("browser.search.searchEnginesURL", "");
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.search.update", false);
@@ -335,7 +335,7 @@ user_pref("browser.sessionstore.resume_from_crash", false);
 user_pref("browser.sessionstore.resume_session_once", false);
 user_pref("browser.sessionstore.resuming_after_os_restart", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
-//user_pref("browser.startup.homepage", "https://duckduckgo.com https://startpage.com https://searx.info https://www.qwant.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results
+//user_pref("browser.startup.homepage", "https://duckduckgo.com https://startpage.com https://searx.info https://www.qwant.com https://swisscows.com https://metager.org"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
