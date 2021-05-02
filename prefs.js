@@ -1,4 +1,4 @@
-// Version: 1.Y2021M04D25
+// Version:1.Y2021M05D02
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -10,6 +10,8 @@
 // GNU/LinuxOS: https://www.mozilla.org
 
 // You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
+
+// If you have a "/path/to/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
 // GNU/LinuxOS Users: Create a "profile" folder in /path/to/FirefoxPortable/ and copy this "prefs.js" file in this folder. The PortableApps-Firefox should already have a PROFILE folder.
 
@@ -27,7 +29,7 @@
 // START: Features DISABLED----------
 // Firefox Account
 // Sync
-// Firefox Updates: You cannot use it this way, hence you always need to download newer versions of Firefox from the sources in the INFO !
+// Firefox Updates
 // Connections to MOZILLA , GOOGLE , and other Servers
 // Safe Browsing
 // Geo Location
@@ -249,6 +251,7 @@ user_pref("browser.newtabpage.activity-stream.topSitesRows", 0);
 user_pref("browser.newtabpage.directory.ping", "");
 user_pref("browser.newtabpage.directory.source", "");
 user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtabpage.enhanced", false);
 user_pref("browser.newtabpage.pinned", "");
 user_pref("browser.onboarding.enabled", false);
 user_pref("browser.partnerlink.attributionURL", "");
@@ -579,7 +582,8 @@ user_pref("network.proxy.type", 0);
 user_pref("network.security.esni.enabled", true);
 //user_pref("network.trr.bootstrapAddress", "1.1.1.1"); // Use "1.1.1.1" ONLY, when "network.trr.resolvers"=https://cloudflare-dns.com/dns-query !
 user_pref("network.trr.confirmationNS", "");
-user_pref("network.trr.mode", 2); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Option "3" is/was a BUG and doesn't let Firefox connect to the Internet ! This preference WILL ignore your "hosts" file ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
+//user_pref("network.trr.excluded-domains", "localhost,local");
+user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Change it to "2" if Firefox doesn't let you connect to the Internet ! This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
 user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"OpenDNS (PRIVACY, Blocks malicious domains)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY, Blocks malicious domains)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (Switzerland, maybe NO PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"Digitale Gesellschaft (Switzerland, PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"Cloudflare DNSoverTor (Experimental, maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"}]");
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
