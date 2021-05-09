@@ -1,4 +1,4 @@
-// Version:1.Y2021M05D02
+// Version:1.Y2021M05D09
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -11,9 +11,9 @@
 
 // You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
 
-// If you have a "/path/to/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
+// If you have a "/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
-// GNU/LinuxOS Users: Create a "profile" folder in /path/to/FirefoxPortable/ and copy this "prefs.js" file in this folder. The PortableApps-Firefox should already have a PROFILE folder.
+// GNU/LinuxOS Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in this folder. The PortableApps-Firefox should already have a PROFILE folder.
 
 //*****************************************************************************************************************************************************
 // START:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/LinuxOS, right-click on it - Preferences - access rights - execute - check.
@@ -41,7 +41,7 @@
 
 // START: Features ENABLED---------- 
 // Private Browsing Mode
-// DOH (DNS over HTTPS)
+// DOH (DNS over HTTPS) Many Privacy Servers
 // DNT (Do not track)
 // END: Features ENABLED----------
 
@@ -565,7 +565,7 @@ user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entri
 user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.file.disable_unc_paths", true);
-//user_pref("network.http.referer.spoofSource", true); // When you visit many Websites that protect themselves with CAPTCHAS, remove this preference.
+//user_pref("network.http.referer.spoofSource", true); // When you visit Websites that protect themselves with CAPTCHAS, leave this preference disabled.
 user_pref("network.http.sendRefererHeader", 0);
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.predictor.cleaned-up", true);
@@ -584,7 +584,7 @@ user_pref("network.security.esni.enabled", true);
 user_pref("network.trr.confirmationNS", "");
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Change it to "2" if Firefox doesn't let you connect to the Internet ! This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"OpenDNS (PRIVACY, Blocks malicious domains)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY, Blocks malicious domains)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (Switzerland, maybe NO PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"Digitale Gesellschaft (Switzerland, PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"Cloudflare DNSoverTor (Experimental, maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"}]");
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Preferences.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
@@ -619,7 +619,7 @@ user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.donottrackheader.value", 1);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
-//user_pref("privacy.resistFingerprinting", true); // If you want more privacy, remove the 2 / in front of user_pref ! But this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some Internet Sites may only work partially !
+//user_pref("privacy.resistFingerprinting", true); // If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some Internet Sites may only work partially !
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.spoof_english", 2);
 user_pref("privacy.trackingprotection.enabled", true);
@@ -644,7 +644,7 @@ user_pref("services.blocklist.plugins.signer", "");
 user_pref("services.blocklist.update_enabled", false);
 user_pref("services.settings.security.onecrl.signer", "");
 user_pref("services.settings.server", "");
-user_pref("services.sync.enabled", false); // If you want to use a "Firefox Account", you need to remove ALL "identity.*" and "services.sync.*" preferences !
+user_pref("services.sync.enabled", false); // If you want to use a "Firefox Account", remove ALL "identity.*" and "services.sync.*" preferences !
 user_pref("services.sync.fxa.privacyURL", "");
 user_pref("services.sync.fxa.termsURL", "");
 user_pref("services.sync.jpake.serverURL", "");
