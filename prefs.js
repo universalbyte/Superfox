@@ -1,4 +1,6 @@
-// Version:1.Y2021M05D09
+// Version:1.Y2021M07D08
+
+// This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -27,16 +29,17 @@
 //*****************************************************************************************************************************************************
 
 // START: Features DISABLED----------
+// Connections to MOZILLA , GOOGLE , and other Servers
+// Firefox Updates
 // Firefox Account
 // Sync
-// Firefox Updates
-// Connections to MOZILLA , GOOGLE , and other Servers
 // Safe Browsing
 // Geo Location
 // Autoplay Audio/Video
 // WebRTC
 // WebGL
 // Telemetry
+// Pocket
 // END: Features DISABLED----------
 
 // START: Features ENABLED---------- 
@@ -110,7 +113,7 @@ user_pref("browser.bookmarksBar.position", "top");
 user_pref("browser.cache.check_doc_frequency", 1);
 user_pref("browser.cache.disk.capacity", 1024000); // 1024000=1Gigabyte
 //user_pref("browser.cache.disk.enable", true); // Remove the 2 / in front of "user_pref" ONLY when you are using a "RAM-Disk" with "browser.cache.disk.parent_directory" and remove the line "user_pref("browser.privatebrowsing.autostart", true);" !
-//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/LinuxOS: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! WindowsOS Software INFO: https://en.wikipedia.org/wiki/RAM_drive
+//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/LinuxOS: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! INFO: https://en.wikipedia.org/wiki/List_of_RAM_drive_software
 user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
@@ -165,6 +168,7 @@ user_pref("browser.discovery.containers.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.discovery.sites", "");
 //user_pref("browser.display.background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some Internet Sites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
+//user_pref("browser.display.focus_background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some Internet Sites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
 user_pref("browser.display.use_document_fonts", 0);
 user_pref("browser.download.autohideButton", true);
 user_pref("browser.download.forbid_open_with", true);
@@ -206,23 +210,23 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.region-stories-con
 user_pref("browser.newtabpage.activity-stream.discoverystream.spoc.impressions", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs-endpoint", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized", false);
-//user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.favicon", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.places", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // Preferences - Home - Firefox Home Content - Highlights PRIMARY
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Preferences - Home - Firefox Home Content - Topstories PRIMARY
+//user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.favicon", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.places", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // "Settings - Home - Firefox Home Content - Highlights" PRIMARY
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
-//user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // Preferences - Home - Firefox Home Content - Snippets PRIMARY
-//user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-//user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false); // Disables the GUI in Preferences - Home - Firefox Home Content
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // Preferences - Home - Firefox Home Content - Top Sites PRIMARY
+//user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // "Settings - Home - Firefox Home Content - Snippets" PRIMARY
+//user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // "Settings - Home - Firefox Home Content - Top Sites" PRIMARY
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
 user_pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
@@ -231,16 +235,16 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcu
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
 user_pref("browser.newtabpage.activity-stream.pocketCta", "");
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false); // Preferences - Home - Firefox Home Content - Highlights SECONDARY
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false); // Preferences - Home - Firefox Home Content - Highlights SECONDARY
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Preferences - Home - Firefox Home Content - Highlights SECONDARY
-user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false); // Preferences - Home - Firefox Home Content - Highlights SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false); // "Settings - Home - Firefox Home Content - Highlights" SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false); // "Settings - Home - Firefox Home Content - Highlights" SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // "Settings - Home - Firefox Home Content - Highlights" SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false); // "Settings - Home - Firefox Home Content - Highlights" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 0);
 user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0);
 user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
-user_pref("browser.newtabpage.activity-stream.showSearch", false); // Preferences - Home - Firefox Home Content - Web Search PRIMARY
+user_pref("browser.newtabpage.activity-stream.showSearch", false); // "Settings - Home - Firefox Home Content - Web Search" PRIMARY
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // Preferences - Home - Firefox Home Content - Top Sites SECONDARY
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); // "Settings - Home - Firefox Home Content - Top Sites" SECONDARY
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion", false);
@@ -265,9 +269,9 @@ user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
 user_pref("browser.restart.purgecache", false);
-user_pref("browser.restart_menu.purgecache", false); // Preferences - General - Restart Menu Item
-user_pref("browser.restart_menu.requireconfirm", false); // Preferences - General - Restart Menu Item
-user_pref("browser.restart_menu.showpanelmenubtn", false); // Preferences - General - Restart Menu Item
+user_pref("browser.restart_menu.purgecache", false); // Settings - General - Restart Menu Item
+user_pref("browser.restart_menu.requireconfirm", false); // Settings - General - Restart Menu Item
+user_pref("browser.restart_menu.showpanelmenubtn", false); // Settings - General - Restart Menu Item
 user_pref("browser.safebrowsing.allowOverride", false);
 user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 user_pref("browser.safebrowsing.debug", false);
@@ -363,7 +367,7 @@ user_pref("browser.urlbar.filter.javascript", true);
 user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
 user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.oneOffSearches", false);
-user_pref("browser.urlbar.openViewOnFocus", false);
+//user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
@@ -561,12 +565,14 @@ user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", true);
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
+//user_pref("network.dns.echconfig.enabled", true); // instead of ESNI !
+//user_pref("network.dns.use_https_rr_as_altsvc", true); // instead of ESNI !
 user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entries are being displayed in about:networking -DNS
 user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.file.disable_unc_paths", true);
 //user_pref("network.http.referer.spoofSource", true); // When you visit Websites that protect themselves with CAPTCHAS, leave this preference disabled.
-user_pref("network.http.sendRefererHeader", 0);
+//user_pref("network.http.sendRefererHeader", 0); // Some Internet Sites may only work partially !
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.predictor.cleaned-up", true);
 user_pref("network.predictor.enable-prefetch", false);
@@ -584,7 +590,7 @@ user_pref("network.security.esni.enabled", true);
 user_pref("network.trr.confirmationNS", "");
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. Change it to "2" if Firefox doesn't let you connect to the Internet ! This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Preferences.
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
@@ -627,6 +633,7 @@ user_pref("privacy.trackingprotection.introURL", "");
 user_pref("privacy.trackingprotection.pbmode.enabled", true);
 user_pref("privacy.trackingprotection.ui.enabled", true);
 user_pref("privacy.userContext.enabled", false);
+//user_pref("reader.parse-on-load.enabled", false); // Reader View
 user_pref("security.certerrors.mitm.priming.endpoint", "");
 user_pref("security.remote_settings.crlite_filters.signer", "");
 user_pref("security.remote_settings.intermediates.signer", "");
