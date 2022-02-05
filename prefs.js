@@ -1,4 +1,4 @@
-// Version:1.Y2021M07D10
+// Version:1.Y2022M02D05
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -15,9 +15,9 @@
 
 // If you have a "/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
-// GNU/LinuxOS Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in this folder. The PortableApps-Firefox should already have a PROFILE folder.
+// GNU/LinuxOS Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in /FirefoxPortable/profile/. The PortableApps-Firefox should already have a PROFILE folder.
 
-//*****************************************************************************************************************************************************
+//*******************************************************************************************************************************************************
 // START:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/LinuxOS, right-click on it - Preferences - access rights - execute - check.
 // [Desktop Entry]
 // Terminal=false
@@ -26,7 +26,7 @@
 // Exec=/path/to/FirefoxPortable/firefox -profile /path/to/FirefoxPortable/profile/ < IMPORTANT ! Edit these paths !
 // Type=Application
 // END:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work !
-//*****************************************************************************************************************************************************
+//*******************************************************************************************************************************************************
 
 // START: Features DISABLED----------
 // Connections to MOZILLA , GOOGLE , and other Servers
@@ -37,6 +37,7 @@
 // Safe Browsing
 // Geo Location
 // Autoplay Audio/Video
+// Virtual Reality
 // WebRTC
 // WebGL
 // Telemetry
@@ -223,14 +224,14 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized
 //user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 //user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // "Settings - Home - Firefox Home Content - Recent activity" PRIMARY
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! ! !
 //user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // "Settings - Home - Firefox Home Content - Snippets" PRIMARY
 //user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Pocket Account // Disables the GUI in "Settings - Home - Firefox Home Content"
+//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Pocket Account ! ! ! // Disables the GUI in "Settings - Home - Firefox Home Content"
 //user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // "Settings - Home - Firefox Home Content - Shortcuts" PRIMARY
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
 user_pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
@@ -239,13 +240,13 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.noDefaultSearchTile"
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
-user_pref("browser.newtabpage.activity-stream.pocketCta", ""); // Pocket Account
+user_pref("browser.newtabpage.activity-stream.pocketCta", ""); // Pocket Account ! ! !
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Pocket Account // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 0);
-user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0); // Pocket Account
+user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0); // Pocket Account ! ! !
 user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
 user_pref("browser.newtabpage.activity-stream.showSearch", false); // "Settings - Home - Firefox Home Content - Web Search" PRIMARY
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
@@ -350,7 +351,7 @@ user_pref("browser.sessionstore.resuming_after_os_restart", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.slowStartup.maxSamples", 0);
 user_pref("browser.slowStartup.notificationDisabled", true);
-user_pref("browser.startup.homepage", "https://startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines // OR https://duckduckgo.com https://searx.info https://www.qwant.com https://swisscows.com https://metager.org
+user_pref("browser.startup.homepage", "https://startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines // OR https://duckduckgo.com https://www.mojeek.com https://searx.info https://www.qwant.com https://swisscows.com https://metager.org
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
@@ -360,7 +361,9 @@ user_pref("browser.tabs.copyurl.activetab", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.tabs.duplicateTab", false);
 user_pref("browser.tabs.loadInBackground", false);
+user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.toolbars.bookmarks.visibility", "always"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
+user_pref("browser.topsites.contile.endpoint", "");
 user_pref("browser.translation.engine", "");
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.themeOrigin", "");
@@ -374,8 +377,11 @@ user_pref("browser.urlbar.disableExtendForTests", true);
 user_pref("browser.urlbar.filter.javascript", true);
 user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
 user_pref("browser.urlbar.maxRichResults", 0);
+user_pref("browser.urlbar.merino.endpointURL", "");
 user_pref("browser.urlbar.oneOffSearches", false);
 //user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
+user_pref("browser.urlbar.placeholderName", "");
+user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
@@ -384,6 +390,8 @@ user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.history.onlyTyped", false);
 user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.quicksuggest", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" PRIMARY
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" SECONDARY
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.timesBeforeHidingSuggestionsHint", 0);
@@ -433,6 +441,16 @@ user_pref("dom.security.https_only_mode_send_http_background_request", false);
 //user_pref("dom.storage_access.enabled", false); // Some Internet Sites may only work partially !
 user_pref("dom.vibrator.enabled", false);
 user_pref("dom.vibrator.max_vibrate_ms", 0);
+user_pref("dom.vr.autoactivate.enabled", false);
+user_pref("dom.vr.enabled", false); // Virtual Reality
+user_pref("dom.vr.oculus.enabled", false);
+user_pref("dom.vr.oculus.invisible.enabled", false);
+user_pref("dom.vr.openvr.enabled", false);
+user_pref("dom.vr.osvr.enabled", false);
+user_pref("dom.vr.poseprediction.enabled", false);
+user_pref("dom.vr.process.enabled", false);
+user_pref("dom.vr.puppet.enabled", false);
+user_pref("dom.vr.webxr.enabled", false);
 //user_pref("dom.webnotifications.enabled", false); // If you don't want Website Notifications in the URL Bar, remove the 2 / in front of user_pref.
 user_pref("domsecurity.httpsonly.infoURL", "");
 user_pref("experiments.manifest.uri", "");
@@ -464,9 +482,9 @@ user_pref("extensions.getAddons.search.url", "");
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.themes.browseURL", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-user_pref("extensions.pocket.api", ""); // Pocket Account
-user_pref("extensions.pocket.enabled", false); // Pocket Account
-user_pref("extensions.pocket.site", ""); // Pocket Account
+user_pref("extensions.pocket.api", ""); // Pocket Account ! ! !
+user_pref("extensions.pocket.enabled", false); // Pocket Account ! ! !
+user_pref("extensions.pocket.site", ""); // Pocket Account ! ! !
 user_pref("extensions.recommendations.privacyPolicyUrl", "");
 user_pref("extensions.recommendations.themeRecommendationUrl", "");
 user_pref("extensions.screenshots.disabled", true);
@@ -482,6 +500,7 @@ user_pref("extensions.webcompat-reporter.enabled", false);
 user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
 user_pref("extensions.webextensions.identity.redirectDomain", "");
 user_pref("extensions.webservice.discoverURL", "");
+user_pref("full-screen-api.warning.timeout", 0);
 user_pref("gecko.handlerService.schemes.irc.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.ircs.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.mailto.0.uriTemplate", "");
@@ -601,14 +620,17 @@ user_pref("network.protocol-handler.external.ms-windows-store", false);
 user_pref("network.proxy.autoconfig_url", "");
 user_pref("network.proxy.autoconfig_url.include_path", false);
 user_pref("network.proxy.no_proxies_on", "");
+user_pref("network.proxy.share_proxy_settings", true);
 user_pref("network.proxy.socks_remote_dns", true);
 user_pref("network.proxy.socks_version", 5);
 user_pref("network.proxy.type", 0);
 user_pref("network.security.esni.enabled", true);
 user_pref("network.trr.confirmationNS", "");
+user_pref("network.trr.default_provider_uri", "");
+//user_pref("network.trr.exclude-etc-hosts", false);
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
@@ -646,7 +668,7 @@ user_pref("privacy.donottrackheader.value", 1);
 user_pref("privacy.firstparty.isolate", false);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
-//user_pref("privacy.resistFingerprinting", true); // If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some Internet Sites may only work partially !
+//user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some Internet Sites may only work partially !
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.spoof_english", 2);
 user_pref("privacy.trackingprotection.enabled", true);
@@ -717,6 +739,7 @@ user_pref("toolkit.telemetry.newProfilePing.enabled", false);
 user_pref("toolkit.telemetry.previousBuildID", "");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.server_owner", "");
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false);
 user_pref("toolkit.telemetry.unified", false);
