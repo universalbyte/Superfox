@@ -1,6 +1,6 @@
-// Version:1.Y2022M02D05
+// Version:1.Y2022M08D15
 
-// This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
+// This is a PRIVACY FOCUSED prefs.js file that should work with many Firefox/MOZILLA based browsers !
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -9,49 +9,48 @@
 // Download a portable version of Firefox from the sources below, so that your default Firefox doesn't brake !
 
 // WindowsOS: https://portableapps.com
-// GNU/LinuxOS: https://www.mozilla.org
+// GNU/Linux: https://www.mozilla.org
 
 // You can customize ALL "//user_pref" AND "// INFO" lines to your needs and enable them by removing the 2 / in front of user_pref !
 
 // If you have a "/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
-// GNU/LinuxOS Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in /FirefoxPortable/profile/. The PortableApps-Firefox should already have a PROFILE folder.
+// GNU/Linux Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in /FirefoxPortable/profile/. The PortableApps-Firefox should already have a PROFILE folder.
 
-//*******************************************************************************************************************************************************
-// START:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/LinuxOS, right-click on it - Preferences - access rights - execute - check.
+//*****************************************************************************************************************************************************
+// START:GNU/Linux Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/Linux, right-click on it - Preferences - access rights - execute - check.
 // [Desktop Entry]
 // Terminal=false
 // Icon=/path/to/FirefoxPortable/browser/chrome/icons/default/default128.png < IMPORTANT ! Edit this path !
 // Name=FirefoxPortable
 // Exec=/path/to/FirefoxPortable/firefox -profile /path/to/FirefoxPortable/profile/ < IMPORTANT ! Edit these paths !
 // Type=Application
-// END:GNU/LinuxOS Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work !
-//*******************************************************************************************************************************************************
+// END:GNU/Linux Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work !
+//***************************************************************************************************************************************************
 
-// START: Features DISABLED----------
+// Features DISABLED----------
 // Connections to MOZILLA , GOOGLE , and other Servers
 // Firefox Updates
 // Firefox Account
 // Pocket Account
 // Sync
 // Safe Browsing
-// Geo Location
-// Autoplay Audio/Video
-// Virtual Reality
+// Permissions for: Geo Location, Camera, Microphone, Notifications, Autoplay Audio/Video, Virtual Reality
 // WebRTC
 // WebGL
 // Telemetry
-// END: Features DISABLED----------
+// Features DISABLED----------
 
-// START: Features ENABLED---------- 
+// Features ENABLED---------- 
 // Private Browsing Mode
 // DOH (DNS over HTTPS) Many Privacy Servers
 // DNT (Do not track)
 // Clear Private Data
 // Privacy Search Engines for HOME Button
-// END: Features ENABLED----------
+// Features ENABLED----------
 
-// If you want more privacy...
+// More privacy
+//-------------
 
 // delete the following files:
 
@@ -116,7 +115,7 @@ user_pref("browser.bookmarksBar.position", "top");
 user_pref("browser.cache.check_doc_frequency", 1);
 user_pref("browser.cache.disk.capacity", 1024000); // 1024000=1Gigabyte
 //user_pref("browser.cache.disk.enable", true); // Remove the 2 / in front of "user_pref" ONLY when you are using a "RAM-Disk" with "browser.cache.disk.parent_directory" and remove the line "browser.privatebrowsing.autostart" !
-//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/LinuxOS: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! INFO: https://en.wikipedia.org/wiki/List_of_RAM_drive_software
+//user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/Linux: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! INFO: https://en.wikipedia.org/wiki/List_of_RAM_drive_software
 user_pref("browser.cache.disk.smart_size.enabled", false);
 user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
@@ -170,12 +169,12 @@ user_pref("browser.dictionaries.download.url", "");
 user_pref("browser.discovery.containers.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.discovery.sites", "");
-//user_pref("browser.display.background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some Internet Sites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
-//user_pref("browser.display.focus_background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some Internet Sites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
-//user_pref("browser.display.use_document_fonts", 0); // Some Internet Sites may only work partially !
+//user_pref("browser.display.background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some websites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
+//user_pref("browser.display.focus_background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some websites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
+//user_pref("browser.display.use_document_fonts", 0); // Some websites may only work partially !
 user_pref("browser.download.autohideButton", true);
 user_pref("browser.download.forbid_open_with", true);
-//user_pref("browser.eme.ui.enabled", false); // Disables DRM Pop-up notification on Internet sites.
+//user_pref("browser.eme.ui.enabled", false); // Disables DRM Pop-up notification on websites.
 user_pref("browser.fixup.alternate.enabled", false);
 user_pref("browser.formfill.enable", false);
 user_pref("browser.geolocation.warning.infoURL", "");
@@ -271,6 +270,7 @@ user_pref("browser.ping-centre.production.endpoint", "");
 user_pref("browser.ping-centre.staging.endpoint", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+//user_pref("browser.preferences.moreFromMozilla", false); // Settings - More from Mozilla
 user_pref("browser.privatebrowsing.autostart", true); // You can remove this preference when you are using "browser.cache.disk.enable" and "browser.cache.disk.parent_directory" with a RAM-Disk ! This preference (Private Browsing Mode) will delete ALL USER DATA like "Passwords, Cookies, History, Sessions" before Firefox shuts down ! // If you want the cache to be saved in your /FirefoxPortable/profile/ folder, remove this preference.
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
@@ -322,6 +322,7 @@ user_pref("browser.search.order.US.1", "");
 user_pref("browser.search.order.US.2", "");
 user_pref("browser.search.order.US.3", "");
 user_pref("browser.search.region", "US"); // Fill in your 2-letter country code from: https://en.wikipedia.org/wiki/Country_code
+user_pref("browser.search.searchEngineRemoval", "");
 user_pref("browser.search.searchEnginesURL", "");
 user_pref("browser.search.suggest.enabled", false);
 user_pref("browser.search.update", false);
@@ -380,7 +381,7 @@ user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.merino.endpointURL", "");
 user_pref("browser.urlbar.oneOffSearches", false);
 //user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
-user_pref("browser.urlbar.placeholderName", "");
+user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // "Settings - Search - Search Shortcuts - Search Engines
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
@@ -423,7 +424,7 @@ user_pref("devtools.webide.autoinstallADBHelper", false);
 user_pref("devtools.webide.templatesURL", "");
 user_pref("dom.battery.enabled", false);
 //user_pref("dom.block_download_insecure", false); // Enables insecure downloads.
-//user_pref("dom.enable_performance", false); // Some Internet Sites may only work partially !
+//user_pref("dom.enable_performance", false); // Some websites may only work partially !
 user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.gamepad.enabled", false);
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
@@ -437,8 +438,8 @@ user_pref("dom.push.userAgentID", "");
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_pbm", true);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
-//user_pref("dom.storage.enabled", false); // Add-ons may not work as expected. You may not be able to login on EncryptedMail/VPN Providers. Some Internet Sites may only work partially !
-//user_pref("dom.storage_access.enabled", false); // Some Internet Sites may only work partially !
+//user_pref("dom.storage.enabled", false); // Add-ons may not work as expected. You may not be able to login on EncryptedMail/VPN Providers. Some websites may only work partially !
+//user_pref("dom.storage_access.enabled", false); // Some websites may only work partially !
 user_pref("dom.vibrator.enabled", false);
 user_pref("dom.vibrator.max_vibrate_ms", 0);
 user_pref("dom.vr.autoactivate.enabled", false);
@@ -535,7 +536,7 @@ user_pref("intl.accept_languages", "en-us,en");
 user_pref("intl.locale.matchOS", false);
 user_pref("intl.locale.os", "en-US");
 user_pref("intl.locale.requested", "en-US");
-//user_pref("javascript.enabled", false); // Some Internet Sites may only work partially ! But if you want a more secure browser, remove the 2 / in front of user_pref. Java Scripts on BAD websites ARE malicious !
+//user_pref("javascript.enabled", false); // Some websites may only work partially ! But if you want a more secure browser, remove the 2 / in front of user_pref. Java Scripts on BAD websites ARE malicious !
 user_pref("keyword.enabled", false);
 user_pref("layers.acceleration.disabled", true);
 user_pref("layers.acceleration.force-enabled", false);
@@ -546,7 +547,7 @@ user_pref("loop.enabled", false);
 user_pref("mailnews.messageid_browser.url", "");
 user_pref("mailnews.mx_service_url", "");
 user_pref("media.autoplay.allow-muted", false);
-user_pref("media.autoplay.block-webaudio", true); // Blocks "Internet Sites/Integrated Players" from playing Audio.
+user_pref("media.autoplay.block-webaudio", true); // Blocks "websites/embedded Players" from playing Audio.
 user_pref("media.autoplay.blocking_policy", 2);
 user_pref("media.autoplay.default", 5); // 0: Autoplay allowed , 1: Autoplay blocked , 2: Prompt the user , 5: BlockAll // If you want Videos to autoplay, remove ALL "media.autoplay.*" preferences.
 user_pref("media.autoplay.enabled.user-gestures-needed", false);
@@ -596,7 +597,7 @@ user_pref("network.connectivity-service.DNSv6.domain", "");
 user_pref("network.connectivity-service.IPv4.url", "");
 user_pref("network.connectivity-service.IPv6.url", "");
 user_pref("network.connectivity-service.enabled", false);
-user_pref("network.cookie.cookieBehavior", 1);
+//user_pref("network.cookie.cookieBehavior", 1);
 user_pref("network.cookie.lifetime.days", 1);
 user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", true);
@@ -609,7 +610,7 @@ user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long en
 user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
 user_pref("network.file.disable_unc_paths", true);
 //user_pref("network.http.referer.spoofSource", true); // When you visit Websites that protect themselves with CAPTCHAS, leave this line disabled.
-//user_pref("network.http.sendRefererHeader", 0); // Some Internet Sites may only work partially !
+//user_pref("network.http.sendRefererHeader", 0); // Some websites may only work partially !
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.manage-offline-status", false);
 user_pref("network.predictor.cleaned-up", true);
@@ -630,11 +631,16 @@ user_pref("network.trr.default_provider_uri", "");
 //user_pref("network.trr.exclude-etc-hosts", false);
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
 user_pref("offline-apps.allow_by_default", false);
+user_pref("permissions.default.camera", 2); // Permission: camera
+user_pref("permissions.default.desktop-notification", 2); // Permission: notifications
+user_pref("permissions.default.geo", 2); // Permission: location
+user_pref("permissions.default.microphone", 2); // Permission: microphone
+user_pref("permissions.default.xr", 2); // Permission: "Virtual Reality"
 user_pref("pfs.datasource.url", "");
 user_pref("pfs.filehint.url", "");
 user_pref("places.history.enabled", false);
@@ -668,15 +674,12 @@ user_pref("privacy.donottrackheader.value", 1);
 user_pref("privacy.firstparty.isolate", false);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
-//user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some Internet Sites may only work partially !
+//user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.spoof_english", 2);
-user_pref("privacy.trackingprotection.enabled", true);
 user_pref("privacy.trackingprotection.introURL", "");
-user_pref("privacy.trackingprotection.pbmode.enabled", true);
-user_pref("privacy.trackingprotection.ui.enabled", true);
 user_pref("privacy.userContext.enabled", false);
-user_pref("reader.parse-on-load.enabled", false); // Reader View ! Remove this preference if you want to read Internet Sites easier.
+user_pref("reader.parse-on-load.enabled", false); // Reader View ! Remove this preference if you want to read websites easier.
 user_pref("security.certerrors.mitm.priming.endpoint", "");
 user_pref("security.remote_settings.crlite_filters.signer", "");
 user_pref("security.remote_settings.intermediates.signer", "");
@@ -751,10 +754,10 @@ user_pref("urlclassifier.phishTable", "");
 user_pref("urlclassifier.trackingTable", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("webextensions.storage.sync.serverURL", "");
-user_pref("webgl.disabled", true); // WebGL ! 3D Rendering !
-user_pref("webgl.enable-debug-renderer-info", false);
-user_pref("webgl.enable-webgl2", false);
-user_pref("webgl.min_capability_mode", true);
+user_pref("webgl.disabled", true); // WebGL ! 3D Rendering ! Some MAPS websites may not work !
+user_pref("webgl.enable-debug-renderer-info", false); // Some MAPS websites may not work !
+user_pref("webgl.enable-webgl2", false); // Some MAPS websites may not work !
+user_pref("webgl.min_capability_mode", true); // Some MAPS websites may not work !
 user_pref("xpinstall.signatures.devInfoURL", "");
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
