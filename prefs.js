@@ -1,6 +1,6 @@
-// Version:1.Y2022M08D15
+// Version:1.Y2022M09D02
 
-// This is a PRIVACY FOCUSED prefs.js file that should work with many Firefox/MOZILLA based browsers !
+// This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
 // Please DON'T file a bug report to MOZILLA if anything doesn't work ! Instead search in this file for a solution or contact the maintainer/developer of this prefs.js file. Thank you.
 
@@ -111,9 +111,10 @@ user_pref("browser.aboutHomeSnippets.updateUrl", "");
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.bookmarks.max_backups", 0);
+user_pref("browser.bookmarks.restore_default_bookmarks", false);
 user_pref("browser.bookmarksBar.position", "top");
 user_pref("browser.cache.check_doc_frequency", 1);
-user_pref("browser.cache.disk.capacity", 1024000); // 1024000=1Gigabyte
+user_pref("browser.cache.disk.capacity", 1048576); // 1048576=1Gigabyte
 //user_pref("browser.cache.disk.enable", true); // Remove the 2 / in front of "user_pref" ONLY when you are using a "RAM-Disk" with "browser.cache.disk.parent_directory" and remove the line "browser.privatebrowsing.autostart" !
 //user_pref("browser.cache.disk.parent_directory", "WindowsOS: RAM-Disk-Letter:\FirefoxPortableCache\ , GNU/Linux: /dev/shm/FirefoxPortableCache/"); "browser.cache.disk.enable" MUST be set to TRUE to use this preference ! INFO: https://en.wikipedia.org/wiki/List_of_RAM_drive_software
 user_pref("browser.cache.disk.smart_size.enabled", false);
@@ -391,6 +392,7 @@ user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.history.onlyTyped", false);
 user_pref("browser.urlbar.suggest.openpage", false);
+user_pref("browser.urlbar.suggest.quickactions", false); // "Settings - Privacy & Security - Address Bar - Quick Actions
 user_pref("browser.urlbar.suggest.quicksuggest", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" PRIMARY
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" SECONDARY
 user_pref("browser.urlbar.suggest.searches", false);
