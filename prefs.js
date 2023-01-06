@@ -1,4 +1,4 @@
-// Version:1.Y2022M09D02
+// Version:1.Y2023M01D03
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -87,17 +87,22 @@ user_pref("app.update.auto", false);
 user_pref("app.update.autocheck", false);
 user_pref("app.update.check.enabled", false);
 user_pref("app.update.checkInstallTime", false);
+user_pref("app.update.checkInstallTime.days", 0);
 user_pref("app.update.doorhanger", false);
 user_pref("app.update.download.promptMaxAttempts", 0);
 user_pref("app.update.elevation.promptMaxAttempts", 0);
 user_pref("app.update.enabled", false);
+user_pref("app.update.interval", 0);
 user_pref("app.update.langpack.enabled", false);
 user_pref("app.update.log", false);
 user_pref("app.update.log.file", false);
+user_pref("app.update.promptWaitTime", 0);
 user_pref("app.update.service.enabled", false);
 user_pref("app.update.silent", false);
 user_pref("app.update.staging.enabled", false);
 user_pref("app.update.startup.check", false);
+user_pref("app.update.timerFirstInterval", 0);
+user_pref("app.update.timerMinimumDelay", 0);
 user_pref("app.update.url", "");
 user_pref("app.update.url.details", "");
 user_pref("app.update.url.manual", "");
