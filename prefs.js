@@ -1,4 +1,4 @@
-// Version:1.Y2023M01D03
+// Version:1.Y2023M01D20
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -277,7 +277,7 @@ user_pref("browser.ping-centre.staging.endpoint", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
 //user_pref("browser.preferences.moreFromMozilla", false); // Settings - More from Mozilla
-user_pref("browser.privatebrowsing.autostart", true); // You can remove this preference when you are using "browser.cache.disk.enable" and "browser.cache.disk.parent_directory" with a RAM-Disk ! This preference (Private Browsing Mode) will delete ALL USER DATA like "Passwords, Cookies, History, Sessions" before Firefox shuts down ! // If you want the cache to be saved in your /FirefoxPortable/profile/ folder, remove this preference.
+user_pref("browser.privatebrowsing.autostart", true); // You can remove this preference when you are using "browser.cache.disk.enable" and "browser.cache.disk.parent_directory" with a RAM-Disk ! This preference (Private Browsing Mode) will delete ALL USER DATA like "Passwords, Cookies, History, Sessions" when you close Firefox ! // If you want the cache to be saved in your /FirefoxPortable/profile/ folder, remove this preference.
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
 user_pref("browser.region.update.enabled", false);
@@ -625,7 +625,7 @@ user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.predictor.enabled", false);
 user_pref("network.prefetch-next", false);
 user_pref("network.protocol-handler.external.ms-windows-store", false);
-user_pref("network.proxy.autoconfig_url", "");
+user_pref("network.proxy.autoconfig_url", "file:///path/to/proxy.pac");
 user_pref("network.proxy.autoconfig_url.include_path", false);
 user_pref("network.proxy.no_proxies_on", "");
 user_pref("network.proxy.share_proxy_settings", true);
@@ -730,6 +730,7 @@ user_pref("signon.storeWhenAutocompleteOff", false);
 user_pref("startup.homepage_override_url", "");
 user_pref("startup.homepage_welcome_url", "");
 user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("svg.context-properties.content.allowed-domains", "");
 user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.crashreporter.infoURL", "");
@@ -754,6 +755,7 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
+user_pref("ui.systemUsesDarkTheme", 0);
 user_pref("urlclassifier.downloadAllowTable", "");
 user_pref("urlclassifier.downloadBlockTable", "");
 user_pref("urlclassifier.passwordAllowTable", "");
