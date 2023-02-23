@@ -1,4 +1,4 @@
-// Version:1.Y2023M02D12
+// Version:1.Y2023M02D21
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -6,16 +6,17 @@
 
 // Copy this file in your BACKUP LOCATION and ONLY edit it when it is placed in /FirefoxPortable/profile/ !
 
-// Download a portable version of Firefox from the sources below, so that your default Firefox doesn't brake !
+// Download a portable version of Firefox from the sources below, so that your default Firefox doesn't break !
 
 // WindowsOS: https://portableapps.com
 // GNU/Linux: https://www.mozilla.org
 
-// You can customize ALL "//user_pref" AND "// INFO" lines to your needs and enable them by removing the 2 / in front of user_pref !
+// You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
 
 // If you have a "/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
-// GNU/Linux Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in /FirefoxPortable/profile/. The PortableApps-Firefox should already have a PROFILE folder.
+// GNU/Linux Users: Create a "profile" folder in /FirefoxPortable/ and copy this "prefs.js" file in /FirefoxPortable/profile/.
+// WindowsOS Users: The PortableApps-Firefox should already have a PROFILE folder.
 
 //*****************************************************************************************************************************************************
 // START:GNU/Linux Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work ! Name it "FirefoxPortable.desktop" on GNU/Linux, right-click on it - Preferences - access rights - execute - check.
@@ -358,7 +359,7 @@ user_pref("browser.sessionstore.resuming_after_os_restart", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.slowStartup.maxSamples", 0);
 user_pref("browser.slowStartup.notificationDisabled", true);
-user_pref("browser.startup.homepage", "https://startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google Results ; Searx = Bing Results ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex Results ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines // OR https://duckduckgo.com https://www.mojeek.com https://searx.info https://www.qwant.com https://swisscows.com https://metager.org
+user_pref("browser.startup.homepage", "https://startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google ; Searx = Bing ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines // OR https://duckduckgo.com https://www.mojeek.com https://searx.info https://searx.xyz https://searx.win https://www.qwant.com https://swisscows.com https://metager.org
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
@@ -386,8 +387,8 @@ user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
 user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.merino.endpointURL", "");
 user_pref("browser.urlbar.oneOffSearches", false);
-//user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
-user_pref("browser.urlbar.placeholderName", "DuckDuckGo"); // "Settings - Search - Search Shortcuts - Search Engines
+user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
+//user_pref("browser.urlbar.placeholderName", ""); // "Settings - Search - Search Shortcuts - Search Engines
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
@@ -459,7 +460,7 @@ user_pref("dom.vr.poseprediction.enabled", false);
 user_pref("dom.vr.process.enabled", false);
 user_pref("dom.vr.puppet.enabled", false);
 user_pref("dom.vr.webxr.enabled", false);
-//user_pref("dom.webnotifications.enabled", false); // If you don't want Website Notifications in the URL Bar, remove the 2 / in front of user_pref.
+user_pref("dom.webnotifications.enabled", false); // If you want Website Notifications in the URL Bar, add 2 / in front of user_pref.
 user_pref("domsecurity.httpsonly.infoURL", "");
 user_pref("experiments.manifest.uri", "");
 user_pref("extensions.abuseReport.amoDetailsURL", "");
@@ -500,6 +501,7 @@ user_pref("extensions.screenshots.upload-disabled", true);
 user_pref("extensions.shield-recipe-client.api_url", "");
 user_pref("extensions.systemAddon.update.enabled", false);
 user_pref("extensions.systemAddon.update.url", "");
+user_pref("extensions.unifiedExtensions.enabled", false);
 user_pref("extensions.update.autoUpdateDefault", false);
 user_pref("extensions.update.background.url", "");
 user_pref("extensions.update.enabled", false);
@@ -612,9 +614,9 @@ user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
 //user_pref("network.dns.echconfig.enabled", true); // instead of ESNI !
 //user_pref("network.dns.use_https_rr_as_altsvc", true); // instead of ESNI !
-user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entries are being displayed in about:networking -DNS
-user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
-user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking -DNS
+user_pref("network.dnsCacheEntries", 0); // This Preference shows how many entries are being displayed in about:networking/DNS
+user_pref("network.dnsCacheExpiration", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking/DNS
+user_pref("network.dnsCacheExpirationGracePeriod", 0); // This Preference shows how long entries are being displayed in SECONDS in about:networking/DNS
 user_pref("network.file.disable_unc_paths", true);
 //user_pref("network.http.referer.spoofSource", true); // When you visit Websites that protect themselves with CAPTCHAS, leave this line disabled.
 //user_pref("network.http.sendRefererHeader", 0); // Some websites may only work partially !
@@ -640,6 +642,7 @@ user_pref("network.trr.default_provider_uri", "");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
 user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
+user_pref("network.trr_ui.skip_reason_learn_more_url", "");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
 user_pref("offline-apps.allow_by_default", false);
@@ -717,6 +720,8 @@ user_pref("services.sync.tokenServerURI", "");
 user_pref("shield.savant.enabled", false);
 user_pref("signon.autofillForms", false);
 user_pref("signon.autofillForms.http", false);
+user_pref("signon.firefoxRelay.base_url", "");
+user_pref("signon.firefoxRelay.learn_more_url", "");
 user_pref("signon.generation.enabled", false);
 user_pref("signon.management.page.breachAlertUrl", "");
 user_pref("signon.management.page.breach-alerts.enabled", false);
@@ -741,6 +746,10 @@ user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.cachedClientID", "");
 user_pref("toolkit.telemetry.coverage.opt-out", true);
+user_pref("toolkit.telemetry.dap_enabled", false);
+user_pref("toolkit.telemetry.dap_helper", "");
+user_pref("toolkit.telemetry.dap_leader", "");
+user_pref("toolkit.telemetry.dap_task1_enabled", false);
 user_pref("toolkit.telemetry.ecosystemtelemetry.enabled", false);
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
@@ -751,6 +760,7 @@ user_pref("toolkit.telemetry.previousBuildID", "");
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("toolkit.telemetry.server", "");
 user_pref("toolkit.telemetry.server_owner", "");
+user_pref("toolkit.telemetry.shutdownPingSender.backgroundtask.enabled", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.shutdownPingSender.enabledFirstSession", false);
 user_pref("toolkit.telemetry.unified", false);
@@ -763,10 +773,10 @@ user_pref("urlclassifier.phishTable", "");
 user_pref("urlclassifier.trackingTable", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("webextensions.storage.sync.serverURL", "");
-user_pref("webgl.disabled", true); // WebGL ! 3D Rendering ! Some MAPS websites may not work !
-user_pref("webgl.enable-debug-renderer-info", false); // Some MAPS websites may not work !
-user_pref("webgl.enable-webgl2", false); // Some MAPS websites may not work !
-user_pref("webgl.min_capability_mode", true); // Some MAPS websites may not work !
+user_pref("webgl.disabled", true); // WebGL ! 3D Rendering ! Some MAPS or other WebGL based websites may not work !
+user_pref("webgl.enable-debug-renderer-info", false); // Some MAPS or other WebGL based websites may not work !
+user_pref("webgl.enable-webgl2", false); // Some MAPS or other WebGL based websites may not work !
+user_pref("webgl.min_capability_mode", true); // Some MAPS or other WebGL based websites may not work !
 user_pref("xpinstall.signatures.devInfoURL", "");
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
