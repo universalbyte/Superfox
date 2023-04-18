@@ -1,4 +1,4 @@
-// Version:1.Y2023M02D21
+// Version:1.Y2023M04D18
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -63,7 +63,7 @@
 // /FirefoxPortable/browser/crashreporter-override.ini
 // /FirefoxPortable/browser/features/*.xpi Choose wisely !
 
-// remove the URL's from:
+// remove the URLs from:
 
 // /FirefoxPortable/application.ini
 // /FirefoxPortable/platform.ini
@@ -263,7 +263,7 @@ user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion", fa
 user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.telemetry.ut.events", false);
 user_pref("browser.newtabpage.activity-stream.tippyTop.service.endpoint", "");
-user_pref("browser.newtabpage.activity-stream.topSitesRows", 0); // New Tab
+user_pref("browser.newtabpage.activity-stream.topSitesRows", 0); // "Settings - Home - Homepage Content - Shortcuts - Sites you save or visit"
 user_pref("browser.newtabpage.directory.ping", "");
 user_pref("browser.newtabpage.directory.source", "");
 user_pref("browser.newtabpage.enabled", false);
@@ -359,7 +359,8 @@ user_pref("browser.sessionstore.resuming_after_os_restart", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.slowStartup.maxSamples", 0);
 user_pref("browser.slowStartup.notificationDisabled", true);
-user_pref("browser.startup.homepage", "https://startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! DuckDuckGo = Yahoo , Bing , Yandex Results ; Startpage = Google ; Searx = Bing ; Qwant = Bing , Google , Reddit , Wikipedia , Yahoo , Yandex ; Swisscows = Bing (Family-friendly) ; Metager = 50 search engines // OR https://duckduckgo.com https://www.mojeek.com https://searx.info https://searx.xyz https://searx.win https://www.qwant.com https://swisscows.com https://metager.org
+user_pref("browser.startup.blankWindow", false);
+user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! https://duckduckgo.com https://www.qwant.com https://www.mojeek.com https://swisscows.com https://metager.org https://searx.space(Multi-Instance-Provider)
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
@@ -460,7 +461,7 @@ user_pref("dom.vr.poseprediction.enabled", false);
 user_pref("dom.vr.process.enabled", false);
 user_pref("dom.vr.puppet.enabled", false);
 user_pref("dom.vr.webxr.enabled", false);
-user_pref("dom.webnotifications.enabled", false); // If you want Website Notifications in the URL Bar, add 2 / in front of user_pref.
+user_pref("dom.webnotifications.enabled", false); // If you want Website Notifications in the URL Bar, remove this line.
 user_pref("domsecurity.httpsonly.infoURL", "");
 user_pref("experiments.manifest.uri", "");
 user_pref("extensions.abuseReport.amoDetailsURL", "");
@@ -556,7 +557,7 @@ user_pref("loop.enabled", false);
 user_pref("mailnews.messageid_browser.url", "");
 user_pref("mailnews.mx_service_url", "");
 user_pref("media.autoplay.allow-muted", false);
-user_pref("media.autoplay.block-webaudio", true); // Blocks "websites/embedded Players" from playing Audio.
+user_pref("media.autoplay.block-webaudio", true); // Blocks websites or "embedded Players" from playing Audio.
 user_pref("media.autoplay.blocking_policy", 2);
 user_pref("media.autoplay.default", 5); // 0: Autoplay allowed , 1: Autoplay blocked , 2: Prompt the user , 5: BlockAll // If you want Videos to autoplay, remove ALL "media.autoplay.*" preferences.
 user_pref("media.autoplay.enabled.user-gestures-needed", false);
@@ -639,7 +640,7 @@ user_pref("network.trr.confirmationNS", "");
 user_pref("network.trr.default_provider_uri", "");
 //user_pref("network.trr.exclude-etc-hosts", false);
 //user_pref("network.trr.excluded-domains", "localhost,local");
-user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your "System hosts" file or enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
+user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your System's "hosts" file ! Enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
 user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 user_pref("network.trr_ui.skip_reason_learn_more_url", "");
