@@ -1,4 +1,4 @@
-// Version:1.Y2023M04D18
+// Version:1.Y2023M07D18
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -11,7 +11,7 @@
 // WindowsOS: https://portableapps.com
 // GNU/Linux: https://www.mozilla.org
 
-// You can customize ALL "//user_pref" lines to your needs and enable them by removing the 2 / in front of user_pref !
+// You can enable all "//user_pref" lines by removing the 2 / in front of user_pref !
 
 // If you have a "/FirefoxPortable/profile/invalidprefs.js" file, then something went wrong during your editing !
 
@@ -75,6 +75,7 @@ user_pref("app.faqURL", "");
 user_pref("app.feedback.baseURL", "");
 user_pref("app.normandy.api_url", "");
 user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.optoutstudies.enabled", false);
 user_pref("app.normandy.shieldLearnMoreUrl", "");
 user_pref("app.privacyURL", "");
 user_pref("app.productInfo.baseURL", "");
@@ -203,7 +204,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.useRemoteL10n", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
-user_pref("browser.newtabpage.activity-stream.discoverystream.config", "");
+//user_pref("browser.newtabpage.activity-stream.discoverystream.config", ""); // Pocket Account ! ! !
 user_pref("browser.newtabpage.activity-stream.discoverystream.enabled", false);
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpointSpocsClear", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpoints", "");
@@ -231,7 +232,7 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized
 //user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // "Settings - Home - Firefox Home Content - Recent activity" PRIMARY
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! ! !
+//user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! ! ! Will produce an ERROR in TERMINAL !
 //user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // "Settings - Home - Firefox Home Content - Snippets" PRIMARY
 //user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
@@ -340,6 +341,7 @@ user_pref("browser.send_pings", false);
 user_pref("browser.send_pings.require_same_host", false);
 user_pref("browser.sessionhistory.max_entries", 2);
 user_pref("browser.sessionhistory.max_total_viewers", -1);
+//user_pref("browser.sessionstore.collect_session_storage", false); // No INFO !
 user_pref("browser.sessionstore.enabled", false);
 user_pref("browser.sessionstore.interval", 0);
 user_pref("browser.sessionstore.interval.idle", 0);
@@ -348,6 +350,7 @@ user_pref("browser.sessionstore.max_serialize_back", 0);
 user_pref("browser.sessionstore.max_serialize_forward", 0);
 user_pref("browser.sessionstore.max_tabs_undo", 0);
 user_pref("browser.sessionstore.max_windows_undo", 0);
+//user_pref("browser.sessionstore.platform_collection", false); // No INFO !
 user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.sessionstore.restore_hidden_tabs", false);
 user_pref("browser.sessionstore.restore_on_demand", false);
@@ -359,6 +362,11 @@ user_pref("browser.sessionstore.resuming_after_os_restart", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref("browser.slowStartup.maxSamples", 0);
 user_pref("browser.slowStartup.notificationDisabled", true);
+user_pref("browser.snippets.enabled", "");
+user_pref("browser.snippets.geoUrl", "");
+user_pref("browser.snippets.statsUrl", "");
+user_pref("browser.snippets.syncPromo.enabled", false);
+user_pref("browser.snippets.updateUrl", "");
 user_pref("browser.startup.blankWindow", false);
 user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! https://duckduckgo.com https://www.qwant.com https://www.mojeek.com https://swisscows.com https://metager.org https://searx.space(Multi-Instance-Provider)
 user_pref("browser.startup.page", 0);
@@ -390,6 +398,7 @@ user_pref("browser.urlbar.merino.endpointURL", "");
 user_pref("browser.urlbar.oneOffSearches", false);
 user_pref("browser.urlbar.openViewOnFocus", false); // This preference may be deprecated.
 //user_pref("browser.urlbar.placeholderName", ""); // "Settings - Search - Search Shortcuts - Search Engines
+user_pref("browser.urlbar.placeholderName.private", "");
 user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
@@ -412,32 +421,38 @@ user_pref("browser.urlbar.update1.interventions", false);
 user_pref("browser.urlbar.update1.searchTips", false);
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
+user_pref("browser.webapps.updateCheckUrl", "");
 user_pref("browser.xr.warning.infoURL", "");
 user_pref("captivedetect.canonicalURL", "");
+user_pref("datareporting.healthreport.about.reportUrl", "");
+user_pref("datareporting.healthreport.documentServerURI", "");
 user_pref("datareporting.healthreport.infoURL", "");
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled.v2", false);
 user_pref("datareporting.policy.firstRunURL", "");
 user_pref("device.sensors.enabled", false);
+user_pref("devtools.debugger.pending-selected-location", "");
 user_pref("devtools.devedition.promo.url", "");
 user_pref("devtools.devices.url", "");
 user_pref("devtools.gcli.imgurUploadURL", "");
 user_pref("devtools.gcli.jquerySrc", "");
 user_pref("devtools.gcli.lodashSrc", "");
 user_pref("devtools.gcli.underscoreSrc", "");
-user_pref("devtools.performance.recording.ui-base-url", "");
+user_pref("devtools.performance.recording.ui-base-url", ""); // When the browser is launched from TERMINAL, it shows an error that it falls back to https://profiler.firefox.com
 user_pref("devtools.remote.adb.extensionURL", "");
 user_pref("devtools.webide.adbAddonURL", "");
 user_pref("devtools.webide.autoinstallADBHelper", false);
 user_pref("devtools.webide.templatesURL", "");
 user_pref("dom.battery.enabled", false);
-//user_pref("dom.block_download_insecure", false); // Enables insecure downloads.
+//user_pref("dom.block_download_insecure", false); // Remove the 2 / in front of user_pref to enable insecure downloads.
 //user_pref("dom.enable_performance", false); // Some websites may only work partially !
 user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.gamepad.enabled", false);
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 user_pref("dom.ipc.plugins.reportCrashURL", false);
+user_pref("dom.keyboardevent.keypress.hack.dispatch_non_printable_keys", "");
+user_pref("dom.keyboardevent.keypress.hack.use_legacy_keycode_and_charcode", "");
 user_pref("dom.network.enabled", false);
 user_pref("dom.presentation.device.name", "");
 user_pref("dom.push.connection.enabled", false);
@@ -447,6 +462,7 @@ user_pref("dom.push.userAgentID", "");
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_pbm", true);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
+user_pref("dom.sitepermsaddon-provider.separatedBlocklistedDomains", "");
 //user_pref("dom.storage.enabled", false); // Add-ons may not work as expected. You may not be able to login on EncryptedMail/VPN Providers. Some websites may only work partially !
 //user_pref("dom.storage_access.enabled", false); // Some websites may only work partially !
 user_pref("dom.vibrator.enabled", false);
@@ -510,6 +526,7 @@ user_pref("extensions.update.url", "");
 user_pref("extensions.webcompat-reporter.enabled", false);
 user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
 user_pref("extensions.webextensions.identity.redirectDomain", "");
+user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("extensions.webservice.discoverURL", "");
 user_pref("full-screen-api.warning.timeout", 0);
 user_pref("gecko.handlerService.schemes.irc.0.uriTemplate", "");
@@ -517,6 +534,7 @@ user_pref("gecko.handlerService.schemes.ircs.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.mailto.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.mailto.1.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.webcal.0.uriTemplate", "");
+//user_pref("general.config.filename", "");
 user_pref("general.smoothScroll", true);
 //user_pref("general.useragent.override", ""); // Fill in a FAKE USERAGENT or search on the internet for "firefox useragentstring" !
 //user_pref("general.warnOnAboutConfig", false); // This preference may be deprecated.
@@ -597,9 +615,11 @@ user_pref("media.peerconnection.video.enabled", false);
 user_pref("media.peerconnection.video.h264_enabled", false);
 user_pref("media.peerconnection.video.vp9_enabled", false);
 user_pref("media.peerconnection.video.vp9_preferred", false);
+user_pref("media.videocontrols.picture-in-picture.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("media.video_stats.enabled", false);
 user_pref("media.webspeech.synth.enabled", false);
+user_pref("messaging-system.rsexperimentloader.enabled", false);
 user_pref("network.allow-experiments", false);
 user_pref("network.captive-portal-service.enabled", false);
 user_pref("network.connectivity-service.DNSv4.domain", "");
@@ -641,7 +661,7 @@ user_pref("network.trr.default_provider_uri", "");
 //user_pref("network.trr.exclude-etc-hosts", false);
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your System's "hosts" file ! Enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
-user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
+user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/dns-query\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
 user_pref("network.trr_ui.skip_reason_learn_more_url", "");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
@@ -686,8 +706,10 @@ user_pref("privacy.firstparty.isolate", false);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
 //user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
+user_pref("privacy.restrict3rdpartystorage.partitionedHosts", "");
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.spoof_english", 2);
+user_pref("privacy.trackingprotection.emailtracking.webapp.domains", "");
 user_pref("privacy.trackingprotection.introURL", "");
 user_pref("privacy.userContext.enabled", false);
 user_pref("reader.parse-on-load.enabled", false); // Reader View ! Remove this preference if you want to read websites easier.
@@ -722,7 +744,11 @@ user_pref("shield.savant.enabled", false);
 user_pref("signon.autofillForms", false);
 user_pref("signon.autofillForms.http", false);
 user_pref("signon.firefoxRelay.base_url", "");
+user_pref("signon.firefoxRelay.feature", "disabled");
 user_pref("signon.firefoxRelay.learn_more_url", "");
+user_pref("signon.firefoxRelay.manage_url", "");
+user_pref("signon.firefoxRelay.privacy_policy_url", "");
+user_pref("signon.firefoxRelay.terms_of_service_url", "");
 user_pref("signon.generation.enabled", false);
 user_pref("signon.management.page.breachAlertUrl", "");
 user_pref("signon.management.page.breach-alerts.enabled", false);
@@ -771,6 +797,7 @@ user_pref("urlclassifier.downloadAllowTable", "");
 user_pref("urlclassifier.downloadBlockTable", "");
 user_pref("urlclassifier.passwordAllowTable", "");
 user_pref("urlclassifier.phishTable", "");
+user_pref("urlclassifier.trackingAnnotationSkipURLs", "");
 user_pref("urlclassifier.trackingTable", "");
 user_pref("webchannel.allowObject.urlWhitelist", "");
 user_pref("webextensions.storage.sync.serverURL", "");
