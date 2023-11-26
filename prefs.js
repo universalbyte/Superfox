@@ -1,4 +1,4 @@
-// Version:1.Y2023M07D18
+// Version:1.Y2023M11D26
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -703,6 +703,7 @@ user_pref("privacy.cpd.siteSettings", true);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.donottrackheader.value", 1);
 user_pref("privacy.firstparty.isolate", false);
+user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
 //user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
@@ -767,7 +768,9 @@ user_pref("toolkit.coverage.endpoint.base", "");
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.crashreporter.infoURL", "");
 user_pref("toolkit.datacollection.infoURL", "");
-user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+//user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // This Preference will use a "/FirefoxPortable/profile/chrome/userChrome.css" file. Visit https://www.userchrome.org or search the Internet for "firefox userchrome.css".
+user_pref("toolkit.shopping.ohttpConfigURL", "");
+user_pref("toolkit.shopping.ohttpRelayURL", "");
 user_pref("toolkit.metrics.ping.enabled", false);
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
@@ -805,6 +808,7 @@ user_pref("webgl.disabled", true); // WebGL ! 3D Rendering ! Some MAPS or other 
 user_pref("webgl.enable-debug-renderer-info", false); // Some MAPS or other WebGL based websites may not work !
 user_pref("webgl.enable-webgl2", false); // Some MAPS or other WebGL based websites may not work !
 user_pref("webgl.min_capability_mode", true); // Some MAPS or other WebGL based websites may not work !
+user_pref("widget.gtk.overlay-scrollbars.enabled", false);
 user_pref("xpinstall.signatures.devInfoURL", "");
 user_pref("xpinstall.signatures.required", false);
 user_pref("xpinstall.whitelist.required", true);
