@@ -1,4 +1,4 @@
-// Version:1.Y2023M11D26
+// Version:1.Y2024M01D04
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -382,6 +382,8 @@ user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.toolbars.bookmarks.visibility", "always"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
 user_pref("browser.topsites.contile.endpoint", "");
 user_pref("browser.translation.engine", "");
+user_pref("browser.translations.automaticallyPopup", false);
+user_pref("browser.translations.enable", false);
 user_pref("browser.uitour.enabled", false);
 user_pref("browser.uitour.themeOrigin", "");
 user_pref("browser.uitour.url", "");
@@ -446,6 +448,7 @@ user_pref("devtools.webide.autoinstallADBHelper", false);
 user_pref("devtools.webide.templatesURL", "");
 user_pref("dom.battery.enabled", false);
 //user_pref("dom.block_download_insecure", false); // Remove the 2 / in front of user_pref to enable insecure downloads.
+user_pref("dom.disable_beforeunload", true);
 //user_pref("dom.enable_performance", false); // Some websites may only work partially !
 user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.gamepad.enabled", false);
