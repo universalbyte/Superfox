@@ -1,4 +1,4 @@
-// Version:1.Y2024M01D04
+// Version:1.Y2024M02D13
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -81,6 +81,7 @@ user_pref("app.privacyURL", "");
 user_pref("app.productInfo.baseURL", "");
 user_pref("app.releaseNotesURL", "");
 user_pref("app.releaseNotesURL.aboutDialog", "");
+user_pref("app.releaseNotesURL.prompt", "");
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.support.baseURL", "");
 user_pref("app.support.e10sAccessibilityUrl", "");
@@ -377,7 +378,10 @@ user_pref("browser.tabs.copyurl", false);
 user_pref("browser.tabs.copyurl.activetab", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.tabs.duplicateTab", false);
+user_pref("browser.tabs.insertRelatedAfterCurrent", false);
 user_pref("browser.tabs.loadInBackground", false);
+user_pref("browser.tabs.pinnedIconOnly", false);
+//*user_pref("browser.tabs.toolbarposition", "" OR "topabove");
 user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.toolbars.bookmarks.visibility", "always"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
 user_pref("browser.topsites.contile.endpoint", "");
@@ -484,6 +488,7 @@ user_pref("dom.webnotifications.enabled", false); // If you want Website Notific
 user_pref("domsecurity.httpsonly.infoURL", "");
 user_pref("experiments.manifest.uri", "");
 user_pref("extensions.abuseReport.amoDetailsURL", "");
+user_pref("extensions.abuseReport.amoFormURL", "");
 user_pref("extensions.abuseReport.enabled", false);
 user_pref("extensions.abuseReport.url", "");
 user_pref("extensions.blocklist.addonItemURL", "");
@@ -497,6 +502,7 @@ user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
 user_pref("extensions.geckoProfiler.symbols.url", "");
 user_pref("extensions.getAddons.browseAddons", "");
+user_pref("extensions.getAddons.browserMappings.url", "");
 user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("extensions.getAddons.compatOverides.url", "");
 user_pref("extensions.getAddons.discovery.api_url", "");
@@ -512,6 +518,7 @@ user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.themes.browseURL", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("extensions.pocket.api", ""); // Pocket Account ! ! !
+user_pref("extensions.pocket.bffApi", ""); // Pocket Account ! ! !
 user_pref("extensions.pocket.enabled", false); // Pocket Account ! ! !
 user_pref("extensions.pocket.site", ""); // Pocket Account ! ! !
 user_pref("extensions.recommendations.privacyPolicyUrl", "");
@@ -664,8 +671,12 @@ user_pref("network.trr.default_provider_uri", "");
 //user_pref("network.trr.exclude-etc-hosts", false);
 //user_pref("network.trr.excluded-domains", "localhost,local");
 user_pref("network.trr.mode", 3); // 0:DOH=disabled , 2:DOH=enabled ISP-DNS=Backup , 3:DOH=enabled ISP-DNS=disabled. This preference WILL ignore your System's "hosts" file ! Enable "network.trr.excluded-domains" to let Firefox use it ! INFO: https://en.wikipedia.org/wiki/Hosts_(file)
+user_pref("network.trr.ohttp.config_uri", "");
+user_pref("network.trr.ohttp.relay_uri", "");
+user_pref("network.trr.ohttp.uri", "");
 user_pref("network.trr.resolvers", "[{ \"name\": \"Cloudflare (PRIVACY)\", \"url\": \"https://cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware (PRIVACY)\", \"url\": \"https://security.cloudflare-dns.com/dns-query\" },{ \"name\": \"Cloudflare - Malware,Adult (PRIVACY)\", \"url\": \"https://family.cloudflare-dns.com/dns-query\" },{ \"name\": \"Quad9 (PRIVACY)\", \"url\": \"https://dns.quad9.net/dns-query\" },{ \"name\": \"NextDNS (PRIVACY)\", \"url\": \"https://dns.nextdns.io/\" },{ \"name\": \"NextDNS-TRR (PRIVACY ? ? ?)\", \"url\": \"https://trr.dns.nextdns.io/\" },{ \"name\": \"CleanBrowsing - Security (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/security-filter/\" },{ \"name\": \"CleanBrowsing - Family (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/family-filter/\" },{ \"name\": \"CleanBrowsing - Adult (PRIVACY)\", \"url\": \"https://doh.cleanbrowsing.org/doh/adult-filter/\" },{ \"name\": \"AdGuard (PRIVACY)\", \"url\": \"https://dns.adguard.com/dns-query\" },{ \"name\": \"AdGuard - Family (PRIVACY)\", \"url\": \"https://dns-family.adguard.com/dns-query\" },{ \"name\": \"AdGuard - NoFilter (PRIVACY)\", \"url\": \"https://dns-unfiltered.adguard.com/dns-query\" },{ \"name\": \"Digitale Gesellschaft Switzerland (PRIVACY)\", \"url\": \"https://dns.digitale-gesellschaft.ch/dns-query\" },{ \"name\": \"OpenDNS (NO PRIVACY)\", \"url\": \"https://doh.opendns.com/dns-query\" },{ \"name\": \"OpenDNS - Family (NO PRIVACY)\", \"url\": \"https://doh.familyshield.opendns.com/dns-query\" }]"); // { \"name\": \"Cloudflare DNSoverTor (Experimental ! Maybe only used for TorBrowser)\", \"url\": \"https://dns4torpnlfs2ifuz2s2yf3fc7rdmsbhm6rw75euj35pac6ap25zgqad.onion/dns-query\"} // Choose 1 of these DOH-Servers in the Firefox Settings.
 user_pref("network.trr.uri", "https://cloudflare-dns.com/dns-query");
+user_pref("network.trr.use_ohttp", false);
 user_pref("network.trr_ui.skip_reason_learn_more_url", "");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
