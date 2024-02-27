@@ -1,4 +1,4 @@
-// Version:1.Y2024M02D13
+// Version:1.Y2024M02D27
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -27,7 +27,7 @@
 // Exec=/path/to/FirefoxPortable/firefox -profile /path/to/FirefoxPortable/profile/ < IMPORTANT ! Edit these paths !
 // Type=Application
 // END:GNU/Linux Desktop Link---------- IMPORTANT ! Remove this line and the 2 slashes+spaces from all entries of your Desktop Link to make it work !
-//***************************************************************************************************************************************************
+//*****************************************************************************************************************************************************
 
 // Features DISABLED----------
 // Connections to MOZILLA , GOOGLE , and other Servers
@@ -765,6 +765,12 @@ user_pref("signon.firefoxRelay.manage_url", "");
 user_pref("signon.firefoxRelay.privacy_policy_url", "");
 user_pref("signon.firefoxRelay.terms_of_service_url", "");
 user_pref("signon.generation.enabled", false);
+user_pref("signon.icecatRelay.base_url", "");
+user_pref("signon.icecatRelay.feature", "disabled");
+user_pref("signon.icecatRelay.learn_more_url", "");
+user_pref("signon.icecatRelay.manage_url", "");
+user_pref("signon.icecatRelay.privacy_policy_url", "");
+user_pref("signon.icecatRelay.terms_of_service_url", "");
 user_pref("signon.management.page.breachAlertUrl", "");
 user_pref("signon.management.page.breach-alerts.enabled", false);
 user_pref("signon.management.page.faqURL", "");
