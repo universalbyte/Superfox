@@ -1,4 +1,4 @@
-// Version:1.Y2024M02D27
+// Version:1.Y2024M08D11
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -9,7 +9,7 @@
 // Download a portable version of Firefox from the sources below, so that your default Firefox doesn't break !
 
 // WindowsOS: https://portableapps.com
-// GNU/Linux: https://www.mozilla.org
+// GNU/Linux: https://www.mozilla.org https://ftp.mozilla.org/pub/firefox/releases/
 
 // You can enable all "//user_pref" lines by removing the 2 / in front of user_pref !
 
@@ -410,6 +410,7 @@ user_pref("browser.urlbar.searchSuggestionsChoice", false);
 user_pref("browser.urlbar.showSearchSuggestionsFirst", false);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.urlbar.suggest.bookmark", false);
+user_pref("browser.urlbar.suggest.clipboard", false);
 user_pref("browser.urlbar.suggest.engines", false);
 user_pref("browser.urlbar.suggest.history", false);
 user_pref("browser.urlbar.suggest.history.onlyTyped", false);
@@ -417,8 +418,10 @@ user_pref("browser.urlbar.suggest.openpage", false);
 user_pref("browser.urlbar.suggest.quickactions", false); // "Settings - Privacy & Security - Address Bar - Quick Actions
 user_pref("browser.urlbar.suggest.quicksuggest", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" PRIMARY
 user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false); // "Settings - Privacy & Security - Address Bar / Firefox Suggest" SECONDARY
+user_pref("browser.urlbar.suggest.recentsearches", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.topsites", false);
+user_pref("browser.urlbar.suggest.trending", false);
 user_pref("browser.urlbar.timesBeforeHidingSuggestionsHint", 0);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.unifiedcomplete", false);
@@ -462,6 +465,7 @@ user_pref("dom.keyboardevent.keypress.hack.dispatch_non_printable_keys", "");
 user_pref("dom.keyboardevent.keypress.hack.use_legacy_keycode_and_charcode", "");
 user_pref("dom.network.enabled", false);
 user_pref("dom.presentation.device.name", "");
+user_pref("dom.private-attribution.submission.enabled", false);
 user_pref("dom.push.connection.enabled", false);
 user_pref("dom.push.enabled", false);
 user_pref("dom.push.serverURL", "");
@@ -550,7 +554,9 @@ user_pref("general.smoothScroll", true);
 //user_pref("general.warnOnAboutConfig", false); // This preference may be deprecated.
 user_pref("geo.enabled", false); // If you want to use any MAPS Provider, remove this and/or maybe ALL "geo.*" preferences.
 user_pref("geo.provider-country.network.url", "");
+user_pref("geo.provider.geoclue.always_high_accuracy", false);
 user_pref("geo.provider.network.url", "");
+user_pref("geo.provider.use_geoclue", false);
 user_pref("geo.wifi.logging.enabled", false);
 user_pref("geo.wifi.uri", "");
 user_pref("home.sync.updateMode", 0);
@@ -606,6 +612,7 @@ user_pref("media.gmp-manager.url.override", "");
 user_pref("media.gmp-widevinecdm.autoupdate", false);
 user_pref("media.gmp-widevinecdm.enabled", false);
 user_pref("media.hardwaremediakeys.enabled", false);
+user_pref("media.hardware-video-decoding.enabled", true);
 user_pref("media.navigator.enabled", false);
 user_pref("media.navigator.video.enabled", false);
 user_pref("media.peerconnection.default_iceservers", "");
@@ -663,6 +670,7 @@ user_pref("network.proxy.autoconfig_url.include_path", false);
 user_pref("network.proxy.no_proxies_on", "");
 user_pref("network.proxy.share_proxy_settings", true);
 user_pref("network.proxy.socks_remote_dns", true);
+user_pref("network.proxy.socks5_remote_dns", true);
 user_pref("network.proxy.socks_version", 5);
 user_pref("network.proxy.type", 0);
 user_pref("network.security.esni.enabled", true);
