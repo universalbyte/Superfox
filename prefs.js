@@ -1,4 +1,4 @@
-// Version:1.Y2024M08D11
+// Version:1.Y2024M11D03
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -117,6 +117,11 @@ user_pref("breakpad.reportURL", "");
 //user_pref("browser.aboutConfig.showWarning", false); // If you don't want a warning on about:config, remove the 2 / in front of "user_pref"
 user_pref("browser.aboutHomeSnippets.updateUrl", "");
 user_pref("browser.aboutwelcome.enabled", false);
+user_pref("browser.backup.template.fallback-download.aurora", "");
+user_pref("browser.backup.template.fallback-download.beta", "");
+user_pref("browser.backup.template.fallback-download.esr", "");
+user_pref("browser.backup.template.fallback-download.nightly", "");
+user_pref("browser.backup.template.fallback-download.release", "");
 user_pref("browser.bookmarks.addedImportButton", false);
 user_pref("browser.bookmarks.max_backups", 0);
 user_pref("browser.bookmarks.restore_default_bookmarks", false);
@@ -192,6 +197,9 @@ user_pref("browser.laterrun.enabled", false);
 user_pref("browser.library.activity-stream.enabled", false);
 user_pref("browser.link.open_newwindow", 3);
 user_pref("browser.messaging-system.whatsNewPanel.enabled", false); // "What's new" disabled.
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.chat.shortcuts", false);
+user_pref("browser.ml.modelHubRootUrl", "");
 user_pref("browser.newtab.preload", false);
 user_pref("browser.newtab.search.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
@@ -213,6 +221,7 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.engagementLabelEna
 user_pref("browser.newtabpage.activity-stream.discoverystream.flight.blocks", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.hardcoded-basic-layout", false);
 user_pref("browser.newtabpage.activity-stream.discoverystream.isCollectionDismissible", false);
+user_pref("browser.newtabpage.activity-stream.discoverystream.merino-provider.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.personalization.modelKeys", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.rec.impressions", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.recs.personalized", false);
@@ -224,23 +233,15 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.region-stories-con
 user_pref("browser.newtabpage.activity-stream.discoverystream.spoc.impressions", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs-endpoint", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized", false);
-//user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.discoverystreamfeed", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.favicon", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.places", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.prefs", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // "Settings - Home - Firefox Home Content - Recent activity" PRIMARY
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
 //user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! ! ! Will produce an ERROR in TERMINAL !
-//user_pref("browser.newtabpage.activity-stream.feeds.sections", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // "Settings - Home - Firefox Home Content - Snippets" PRIMARY
-//user_pref("browser.newtabpage.activity-stream.feeds.system.topsites", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.system.topstories", false); // Pocket Account ! ! ! // Disables the GUI in "Settings - Home - Firefox Home Content"
-//user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false); // Disables the GUI in "Settings - Home - Firefox Home Content"
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // "Settings - Home - Firefox Home Content - Shortcuts" PRIMARY
+user_pref("browser.newtabpage.activity-stream.feeds.weatherfeed", false);
+user_pref("browser.newtabpage.activity-stream.showWeather", false);
+user_pref("browser.newtabpage.activity-stream.system.showWeather", false);
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
 user_pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.handoffToAwesomebar", false);
@@ -266,6 +267,7 @@ user_pref("browser.newtabpage.activity-stream.telemetry.structuredIngestion.endp
 user_pref("browser.newtabpage.activity-stream.telemetry.ut.events", false);
 user_pref("browser.newtabpage.activity-stream.tippyTop.service.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.topSitesRows", 0); // "Settings - Home - Homepage Content - Shortcuts - Sites you save or visit"
+user_pref("browser.newtabpage.activity-stream.unifiedAds.endpoint", "");
 user_pref("browser.newtabpage.directory.ping", "");
 user_pref("browser.newtabpage.directory.source", "");
 user_pref("browser.newtabpage.enabled", false);
@@ -373,14 +375,17 @@ user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
+//user_pref("browser.tabs.closeWindowWithLastTab", false); // Doesn't close the browser when you close all tabs.
 user_pref("browser.tabs.copyallurls", false);
 user_pref("browser.tabs.copyurl", false);
 user_pref("browser.tabs.copyurl.activetab", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.tabs.duplicateTab", false);
+user_pref("browser.tabs.hoverPreview.showThumbnails", false);
 user_pref("browser.tabs.insertRelatedAfterCurrent", false);
 user_pref("browser.tabs.loadInBackground", false);
 user_pref("browser.tabs.pinnedIconOnly", false);
+user_pref("browser.tabs.remote.separatedMozillaDomains", "");
 //*user_pref("browser.tabs.toolbarposition", "" OR "topabove");
 user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.toolbars.bookmarks.visibility", "always"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
@@ -398,6 +403,7 @@ user_pref("browser.urlbar.daysBeforeHidingSuggestionsPrompt", 0);
 user_pref("browser.urlbar.decodeURLsOnCopy", true);
 user_pref("browser.urlbar.disableExtendForTests", true);
 user_pref("browser.urlbar.filter.javascript", true);
+user_pref("browser.urlbar.keepPanelOpenDuringImeComposition", false);
 user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
 user_pref("browser.urlbar.maxRichResults", 0);
 user_pref("browser.urlbar.merino.endpointURL", "");
@@ -422,6 +428,7 @@ user_pref("browser.urlbar.suggest.recentsearches", false);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("browser.urlbar.suggest.trending", false);
+user_pref("browser.urlbar.suggest.weather", false);
 user_pref("browser.urlbar.timesBeforeHidingSuggestionsHint", 0);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.unifiedcomplete", false);
@@ -471,7 +478,9 @@ user_pref("dom.push.enabled", false);
 user_pref("dom.push.serverURL", "");
 user_pref("dom.push.userAgentID", "");
 user_pref("dom.security.https_only_mode", true);
-user_pref("dom.security.https_only_mode_pbm", true);
+user_pref("dom.security.https_only_mode_ever_enabled", true);
+user_pref("dom.security.https_only_mode_ever_enabled_pbm", true);
+user_pref("dom.security.https_only_mode_pbm", false);
 user_pref("dom.security.https_only_mode_send_http_background_request", false);
 user_pref("dom.sitepermsaddon-provider.separatedBlocklistedDomains", "");
 //user_pref("dom.storage.enabled", false); // Add-ons may not work as expected. You may not be able to login on EncryptedMail/VPN Providers. Some websites may only work partially !
@@ -495,6 +504,7 @@ user_pref("extensions.abuseReport.amoDetailsURL", "");
 user_pref("extensions.abuseReport.amoFormURL", "");
 user_pref("extensions.abuseReport.enabled", false);
 user_pref("extensions.abuseReport.url", "");
+user_pref("extensions.addonAbuseReport.url", "");
 user_pref("extensions.blocklist.addonItemURL", "");
 user_pref("extensions.blocklist.detailsURL", "");
 user_pref("extensions.blocklist.enabled", false);
@@ -596,6 +606,7 @@ user_pref("media.autoplay.blocking_policy", 2);
 user_pref("media.autoplay.default", 5); // 0: Autoplay allowed , 1: Autoplay blocked , 2: Prompt the user , 5: BlockAll // If you want Videos to autoplay, remove ALL "media.autoplay.*" preferences.
 user_pref("media.autoplay.enabled.user-gestures-needed", false);
 user_pref("media.decoder-doctor.new-issue-endpoint", "");
+user_pref("media.devices.enumerate.legacy.allowlist", "");
 user_pref("media.eme.enabled", false); // DRM disabled.
 user_pref("media.getusermedia.browser.enabled", false);
 user_pref("media.getusermedia.screensharing.enabled", false);
@@ -633,12 +644,14 @@ user_pref("media.peerconnection.video.h264_enabled", false);
 user_pref("media.peerconnection.video.vp9_enabled", false);
 user_pref("media.peerconnection.video.vp9_preferred", false);
 user_pref("media.videocontrols.picture-in-picture.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("media.video_stats.enabled", false);
 user_pref("media.webspeech.synth.enabled", false);
 user_pref("messaging-system.rsexperimentloader.enabled", false);
 user_pref("network.allow-experiments", false);
 user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.connectivity-service.DNS_HTTPS.domain", "");
 user_pref("network.connectivity-service.DNSv4.domain", "");
 user_pref("network.connectivity-service.DNSv6.domain", "");
 user_pref("network.connectivity-service.IPv4.url", "");
@@ -660,6 +673,7 @@ user_pref("network.file.disable_unc_paths", true);
 //user_pref("network.http.sendRefererHeader", 0); // Some websites may only work partially !
 user_pref("network.http.speculative-parallel-limit", 0);
 user_pref("network.manage-offline-status", false);
+user_pref("network.microsoft-sso-authority-list", "");
 user_pref("network.predictor.cleaned-up", true);
 user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.predictor.enabled", false);
@@ -689,10 +703,11 @@ user_pref("network.trr_ui.skip_reason_learn_more_url", "");
 //user_pref("network.warnOnAboutNetworking", false); // If you don't want a warning on about:networking, remove the 2 / in front of user_pref.
 user_pref("nglayout.initialpaint.delay", 0);
 user_pref("offline-apps.allow_by_default", false);
-user_pref("permissions.default.camera", 2); // Permission: camera
-user_pref("permissions.default.desktop-notification", 2); // Permission: notifications
-user_pref("permissions.default.geo", 2); // Permission: location
-user_pref("permissions.default.microphone", 2); // Permission: microphone
+user_pref("pdfjs.altTextLearnMoreUrl", "");
+user_pref("permissions.default.camera", 2); // Permission: Camera
+user_pref("permissions.default.desktop-notification", 2); // Permission: Notifications
+user_pref("permissions.default.geo", 2); // Permission: Location
+user_pref("permissions.default.microphone", 2); // Permission: Microphone
 user_pref("permissions.default.xr", 2); // Permission: "Virtual Reality"
 user_pref("pfs.datasource.url", "");
 user_pref("pfs.filehint.url", "");
@@ -753,6 +768,7 @@ user_pref("services.blocklist.plugins.signer", "");
 user_pref("services.blocklist.update_enabled", false);
 user_pref("services.settings.security.onecrl.signer", "");
 user_pref("services.settings.server", "");
+user_pref("services.sync.addons.trustedSourceHostnames", "");
 user_pref("services.sync.enabled", false); // If you want to use a "Firefox Account", remove ALL "identity.*" and "services.sync.*" preferences !
 user_pref("services.sync.fxa.privacyURL", "");
 user_pref("services.sync.fxa.termsURL", "");
@@ -804,6 +820,8 @@ user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.bhrPing.enabled", false);
 user_pref("toolkit.telemetry.cachedClientID", "");
 user_pref("toolkit.telemetry.coverage.opt-out", true);
+user_pref("toolkit.telemetry.dap.helper.url", "");
+user_pref("toolkit.telemetry.dap.leader.url", "");
 user_pref("toolkit.telemetry.dap_enabled", false);
 user_pref("toolkit.telemetry.dap_helper", "");
 user_pref("toolkit.telemetry.dap_leader", "");
