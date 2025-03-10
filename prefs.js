@@ -1,4 +1,4 @@
-// Version:1.Y2024M11D03
+// Version:1.Y2025M03D09
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -37,6 +37,7 @@
 // Sync
 // Safe Browsing
 // Permissions for: Geo Location, Camera, Microphone, Notifications, Autoplay Audio/Video, Virtual Reality
+// Plugins
 // WebRTC
 // WebGL
 // Telemetry
@@ -281,7 +282,6 @@ user_pref("browser.ping-centre.production.endpoint", "");
 user_pref("browser.ping-centre.staging.endpoint", "");
 user_pref("browser.ping-centre.telemetry", false);
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
-//user_pref("browser.preferences.moreFromMozilla", false); // Settings - More from Mozilla
 user_pref("browser.privatebrowsing.autostart", true); // You can remove this preference when you are using "browser.cache.disk.enable" and "browser.cache.disk.parent_directory" with a RAM-Disk ! This preference (Private Browsing Mode) will delete ALL USER DATA like "Passwords, Cookies, History, Sessions" when you close Firefox ! // If you want the cache to be saved in your /FirefoxPortable/profile/ folder, remove this preference.
 user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("browser.region.network.url", "");
@@ -342,7 +342,7 @@ user_pref("browser.search.widget.inNavBar", false);
 user_pref("browser.selfsupport.url", "");
 user_pref("browser.send_pings", false);
 user_pref("browser.send_pings.require_same_host", false);
-user_pref("browser.sessionhistory.max_entries", 2);
+user_pref("browser.sessionhistory.max_entries", 50); // 0="Arrow-Left" and "Arrow-Right" next to the URL-Bar is disabled.
 user_pref("browser.sessionhistory.max_total_viewers", -1);
 //user_pref("browser.sessionstore.collect_session_storage", false); // No INFO !
 user_pref("browser.sessionstore.enabled", false);
@@ -371,7 +371,7 @@ user_pref("browser.snippets.statsUrl", "");
 user_pref("browser.snippets.syncPromo.enabled", false);
 user_pref("browser.snippets.updateUrl", "");
 user_pref("browser.startup.blankWindow", false);
-user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! https://duckduckgo.com https://www.qwant.com https://www.mojeek.com https://swisscows.com https://metager.org https://searx.space(Multi-Instance-Provider)
+user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! https://www.qwant.com https://swisscows.com https://www.mojeek.com https://duckduckgo.com https://searx.space(Multi-Instance-Provider)
 user_pref("browser.startup.page", 0);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
@@ -381,14 +381,16 @@ user_pref("browser.tabs.copyurl", false);
 user_pref("browser.tabs.copyurl.activetab", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.tabs.duplicateTab", false);
+user_pref("browser.tabs.hoverPreview.enabled", false);
 user_pref("browser.tabs.hoverPreview.showThumbnails", false);
 user_pref("browser.tabs.insertRelatedAfterCurrent", false);
 user_pref("browser.tabs.loadInBackground", false);
 user_pref("browser.tabs.pinnedIconOnly", false);
-user_pref("browser.tabs.remote.separatedMozillaDomains", "");
+//user_pref("browser.tabs.remote.separatedMozillaDomains", ""); // Can't install add-ons from https://addons.mozilla.org
 //*user_pref("browser.tabs.toolbarposition", "" OR "topabove");
 user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.toolbars.bookmarks.visibility", "always"); // Edit this preference to show(always) or hide(never) the Bookmarks Toolbar !
+user_pref("browser.topsites.contile.cachedTiles", "");
 user_pref("browser.topsites.contile.endpoint", "");
 user_pref("browser.translation.engine", "");
 user_pref("browser.translations.automaticallyPopup", false);
@@ -447,6 +449,7 @@ user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 user_pref("datareporting.policy.dataSubmissionEnabled.v2", false);
 user_pref("datareporting.policy.firstRunURL", "");
+user_pref("datareporting.usage.uploadEnabled", false);
 user_pref("device.sensors.enabled", false);
 user_pref("devtools.debugger.pending-selected-location", "");
 user_pref("devtools.devedition.promo.url", "");
@@ -591,6 +594,7 @@ user_pref("intl.locale.matchOS", false);
 user_pref("intl.locale.os", "en-US");
 user_pref("intl.locale.requested", "en-US");
 //user_pref("javascript.enabled", false); // Some websites may only work partially ! But if you want a more secure browser, remove the 2 / in front of user_pref. Java Scripts on BAD websites ARE malicious !
+//user_pref("javascript.options.wasm", false); // Some websites may only work partially !
 user_pref("keyword.enabled", false);
 user_pref("layers.acceleration.disabled", true);
 user_pref("layers.acceleration.force-enabled", false);
@@ -611,17 +615,18 @@ user_pref("media.eme.enabled", false); // DRM disabled.
 user_pref("media.getusermedia.browser.enabled", false);
 user_pref("media.getusermedia.screensharing.enabled", false);
 user_pref("media.getusermedia.audiocapture.enabled", false);
-user_pref("media.gmp-eme-adobe.autoupdate", false);
-user_pref("media.gmp-gmpopenh264.autoupdate", false);
-user_pref("media.gmp-gmpopenh264.enabled", false);
-user_pref("media.gmp-gmpopenh264.provider.enabled", false);
+user_pref("media.gmp-eme-adobe.autoupdate", false); // Video-Plugin
+user_pref("media.gmp-gmpopenh264.autoupdate", false); // Video-Plugin
+user_pref("media.gmp-gmpopenh264.enabled", false); // Video-Plugin
+user_pref("media.gmp-gmpopenh264.provider.enabled", false); // Video-Plugin
 user_pref("media.gmp-manager.certs.1.commonName", "");
 user_pref("media.gmp-manager.certs.2.commonName", "");
-user_pref("media.gmp-manager.updateEnabled", false);
-user_pref("media.gmp-manager.url", "");
-user_pref("media.gmp-manager.url.override", "");
-user_pref("media.gmp-widevinecdm.autoupdate", false);
-user_pref("media.gmp-widevinecdm.enabled", false);
+user_pref("media.gmp-manager.chromium-update-url", ""); // Video-Plugin
+user_pref("media.gmp-manager.updateEnabled", false); // Video-Plugin
+user_pref("media.gmp-manager.url", ""); // Video-Plugin
+user_pref("media.gmp-manager.url.override", ""); // Video-Plugin
+user_pref("media.gmp-widevinecdm.autoupdate", false); // Video-Plugin
+user_pref("media.gmp-widevinecdm.enabled", false); // Video-Plugin
 user_pref("media.hardwaremediakeys.enabled", false);
 user_pref("media.hardware-video-decoding.enabled", true);
 user_pref("media.navigator.enabled", false);
@@ -741,6 +746,7 @@ user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.donottrackheader.value", 1);
 user_pref("privacy.firstparty.isolate", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
+user_pref("privacy.GPCheader.enabled", true);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
 //user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
