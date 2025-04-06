@@ -1,4 +1,4 @@
-// Version:1.Y2025M03D09
+// Version:1.Y2025M04D06
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -58,6 +58,7 @@
 
 // /FirefoxPortable/crashreporter
 // /FirefoxPortable/crashreporter.ini
+// /FirefoxPortable/pingsender
 // /FirefoxPortable/updater
 // /FirefoxPortable/updater.ini
 // /FirefoxPortable/update-settings.ini
@@ -89,6 +90,7 @@ user_pref("app.support.e10sAccessibilityUrl", "");
 user_pref("app.support.inputURL", "");
 user_pref("app.update.auto", false);
 user_pref("app.update.autocheck", false);
+user_pref("app.update.channel", "");
 user_pref("app.update.check.enabled", false);
 user_pref("app.update.checkInstallTime", false);
 user_pref("app.update.checkInstallTime.days", 0);
@@ -648,9 +650,18 @@ user_pref("media.peerconnection.video.enabled", false);
 user_pref("media.peerconnection.video.h264_enabled", false);
 user_pref("media.peerconnection.video.vp9_enabled", false);
 user_pref("media.peerconnection.video.vp9_preferred", false);
-user_pref("media.videocontrols.picture-in-picture.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.audio-toggle.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.display-text-tracks.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.display-text-tracks.toggle.enabled", false);
 user_pref("media.videocontrols.picture-in-picture.enable-when-switching-tabs.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.enabled", false); // Picture-in-Picture ! If you want to use it, remove ALL "media.videocontrols.picture-in-picture.*" preferences to make it work !
+user_pref("media.videocontrols.picture-in-picture.improved-video-controls.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.keyboard-controls.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.respect-disablePictureInPicture", false);
+user_pref("media.videocontrols.picture-in-picture.urlbar-button.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.video-toggle.always-show", false);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+user_pref("media.videocontrols.picture-in-picture.video-toggle.has-used", false);
 user_pref("media.video_stats.enabled", false);
 user_pref("media.webspeech.synth.enabled", false);
 user_pref("messaging-system.rsexperimentloader.enabled", false);
@@ -723,6 +734,12 @@ user_pref("plugin.state.libgnome-shell-browser-plugin", 0);
 user_pref("plugin.state.librhythmbox-itms-detection-plugin", 0);
 user_pref("plugins.update.url", "");
 user_pref("privacy.announcements.enabled", false);
+user_pref("privacy.clearHistory.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearHistory.cache", true);
+user_pref("privacy.clearHistory.cookiesAndStorage", true);
+user_pref("privacy.clearHistory.formdata", true);
+user_pref("privacy.clearHistory.historyFormDataAndDownloads", true);
+user_pref("privacy.clearHistory.siteSettings", true);
 user_pref("privacy.clearOnShutdown.cache", true);
 user_pref("privacy.clearOnShutdown.cookies", true);
 user_pref("privacy.clearOnShutdown.downloads", true);
@@ -732,6 +749,19 @@ user_pref("privacy.clearOnShutdown.offlineApps", true);
 user_pref("privacy.clearOnShutdown.openWindows", true);
 user_pref("privacy.clearOnShutdown.sessions", true);
 user_pref("privacy.clearOnShutdown.siteSettings", true);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.cache", true);
+user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", true);
+user_pref("privacy.clearOnShutdown_v2.downloads", true);
+user_pref("privacy.clearOnShutdown_v2.formdata", true);
+user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", true);
+user_pref("privacy.clearOnShutdown_v2.siteSettings", true);
+user_pref("privacy.clearSiteData.browsingHistoryAndDownloads", true);
+user_pref("privacy.clearSiteData.cache", true);
+user_pref("privacy.clearSiteData.cookiesAndStorage", true);
+user_pref("privacy.clearSiteData.formdata", true);
+user_pref("privacy.clearSiteData.historyFormDataAndDownloads", true);
+user_pref("privacy.clearSiteData.siteSettings", true);
 user_pref("privacy.cpd.cache", true);
 user_pref("privacy.cpd.cookies", true);
 user_pref("privacy.cpd.downloads", true);
