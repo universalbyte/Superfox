@@ -1,4 +1,4 @@
-// Version:1.Y2025M04D06
+// Version:1.Y2025M07D11
 
 // This is a PRIVACY FOCUSED prefs.js file that should work with many MOZILLA based browsers !
 
@@ -47,6 +47,7 @@
 // Private Browsing Mode
 // DOH (DNS over HTTPS) Many Privacy Servers
 // DNT (Do not track)
+// Block Third-Party Cookies
 // Clear Private Data
 // Privacy Search Engines for HOME Button
 // Features ENABLED----------
@@ -77,6 +78,7 @@ user_pref("app.faqURL", "");
 user_pref("app.feedback.baseURL", "");
 user_pref("app.normandy.api_url", "");
 user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.first_run", false);
 user_pref("app.normandy.optoutstudies.enabled", false);
 user_pref("app.normandy.shieldLearnMoreUrl", "");
 user_pref("app.privacyURL", "");
@@ -187,6 +189,7 @@ user_pref("browser.discovery.containers.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.discovery.sites", "");
 //user_pref("browser.display.background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some websites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
+user_pref("browser.display.document_color_use", 1);
 //user_pref("browser.display.focus_background_color", "#000000"); // Shows a BLACK page in "new tabs" BUT also on some websites. Black doesn't hurt your eyes and saves energy if you are on a mobile computer using a rechargeable battery !
 //user_pref("browser.display.use_document_fonts", 0); // Some websites may only work partially !
 user_pref("browser.download.autohideButton", true);
@@ -216,7 +219,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.useRemoteL10n", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
-//user_pref("browser.newtabpage.activity-stream.discoverystream.config", ""); // Pocket Account ! ! !
+//user_pref("browser.newtabpage.activity-stream.discoverystream.config", ""); // Pocket Account !
 user_pref("browser.newtabpage.activity-stream.discoverystream.enabled", false);
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpointSpocsClear", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.endpoints", "");
@@ -237,8 +240,8 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.spoc.impressions",
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs-endpoint", "");
 user_pref("browser.newtabpage.activity-stream.discoverystream.spocs.personalized", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false); // "Settings - Home - Firefox Home Content - Recent activity" PRIMARY
-user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
-//user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! ! ! Will produce an ERROR in TERMINAL !
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false); // Pocket Account ! // "Settings - Home - Firefox Home Content - Topstories" PRIMARY
+//user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", ""); // Pocket Account ! Will produce an ERROR in TERMINAL !
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false); // "Settings - Home - Firefox Home Content - Snippets" PRIMARY
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false); // "Settings - Home - Firefox Home Content - Shortcuts" PRIMARY
@@ -252,13 +255,13 @@ user_pref("browser.newtabpage.activity-stream.improvesearch.noDefaultSearchTile"
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
-user_pref("browser.newtabpage.activity-stream.pocketCta", ""); // Pocket Account ! ! !
+user_pref("browser.newtabpage.activity-stream.pocketCta", ""); // Pocket Account !
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
-user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Pocket Account ! ! ! // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false); // Pocket Account ! // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false); // "Settings - Home - Firefox Home Content - Recent activity" SECONDARY
 user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 0);
-user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0); // Pocket Account ! ! !
+user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0); // Pocket Account !
 user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
 user_pref("browser.newtabpage.activity-stream.showSearch", false); // "Settings - Home - Firefox Home Content - Web Search" PRIMARY
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
@@ -373,8 +376,10 @@ user_pref("browser.snippets.statsUrl", "");
 user_pref("browser.snippets.syncPromo.enabled", false);
 user_pref("browser.snippets.updateUrl", "");
 user_pref("browser.startup.blankWindow", false);
+user_pref("browser.startup.couldRestoreSession.count", -1);
 user_pref("browser.startup.homepage", "https://www.startpage.com"); // Choose 1 of these "Privacy Search Engines" to set it for the HOME icon next to the URL-Bar ! https://www.qwant.com https://swisscows.com https://www.mojeek.com https://duckduckgo.com https://searx.space(Multi-Instance-Provider)
 user_pref("browser.startup.page", 0);
+user_pref("browser.startup.preXulSkeletonUI", false);
 user_pref("browser.statusbar.mode", 1);
 user_pref("browser.tabs.allowTabDetach", false); // If you want to drag'n'drop your tabs into a NEW browser window, remove this preference.
 //user_pref("browser.tabs.closeWindowWithLastTab", false); // Doesn't close the browser when you close all tabs.
@@ -536,10 +541,10 @@ user_pref("extensions.getAddons.search.url", "");
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.getAddons.themes.browseURL", "");
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
-user_pref("extensions.pocket.api", ""); // Pocket Account ! ! !
-user_pref("extensions.pocket.bffApi", ""); // Pocket Account ! ! !
-user_pref("extensions.pocket.enabled", false); // Pocket Account ! ! !
-user_pref("extensions.pocket.site", ""); // Pocket Account ! ! !
+user_pref("extensions.pocket.api", ""); // Pocket Account !
+user_pref("extensions.pocket.bffApi", ""); // Pocket Account !
+user_pref("extensions.pocket.enabled", false); // Pocket Account !
+user_pref("extensions.pocket.site", ""); // Pocket Account !
 user_pref("extensions.recommendations.privacyPolicyUrl", "");
 user_pref("extensions.recommendations.themeRecommendationUrl", "");
 user_pref("extensions.screenshots.disabled", true);
@@ -673,7 +678,7 @@ user_pref("network.connectivity-service.DNSv6.domain", "");
 user_pref("network.connectivity-service.IPv4.url", "");
 user_pref("network.connectivity-service.IPv6.url", "");
 user_pref("network.connectivity-service.enabled", false);
-//user_pref("network.cookie.cookieBehavior", 1);
+user_pref("network.cookie.cookieBehavior", 1); // 0=Accept cookies and site data , 1=Block all third-party cookies , 2=Block all cookies , 3=Block cookies from unvisited websites , 4=Block cross-site and social media trackers.
 user_pref("network.cookie.lifetime.days", 1);
 user_pref("network.cookie.lifetimePolicy", 2);
 user_pref("network.dns.disableIPv6", true);
@@ -779,7 +784,8 @@ user_pref("privacy.globalprivacycontrol.enabled", true);
 user_pref("privacy.GPCheader.enabled", true);
 user_pref("privacy.item.cookies", true);
 user_pref("privacy.popups.showBrowserMessage", false);
-//user_pref("privacy.resistFingerprinting", true); // Disables Fingerprinting ! If you want more privacy, remove the 2 / in front of user_pref, but this will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
+//user_pref("privacy.resistFingerprinting", true); // Remove the 2 / in front of user_pref to prevent fingerprinting. This will ALWAYS load Firefox in a SMALLER window like TorBrowser ! Some websites may only work partially !
+//user_pref("privacy.resistFingerprinting.letterboxing", true); // Remove the 2 / in front of user_pref to prevent fingerprinting. This will make Website-View smaller.
 user_pref("privacy.restrict3rdpartystorage.partitionedHosts", "");
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.spoof_english", 2);
@@ -816,6 +822,8 @@ user_pref("services.sync.syncKeyHelpURL", "");
 user_pref("services.sync.termsURL", "");
 user_pref("services.sync.tokenServerURI", "");
 user_pref("shield.savant.enabled", false);
+user_pref("sidebar.revamp", false);
+user_pref("sidebar.verticalTabs", false);
 user_pref("signon.autofillForms", false);
 user_pref("signon.autofillForms.http", false);
 user_pref("signon.firefoxRelay.base_url", "");
